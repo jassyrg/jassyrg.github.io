@@ -405,7 +405,7 @@
         <!--NOTICE END -->
 
 <div id="gbook_guestbook" align="center">
-	<span class="gbook_guestbook">View e-mail address</span>
+	<span class="gbook_guestbook">Reply to guestbook post</span>
 </div>
 
 <form action="gbook.php" method="post">
@@ -413,19 +413,44 @@
 <div id="gbook_entries">
 
 	
-    <div class="gbook_sign_text">Only guestbook owner may view e-mail addresses. To view contact e-mail please enter your administration password and click the &quot;View Email address&quot; button.</div>
+    <div class="gbook_sign_text">Guestbook owner may use this form to reply to a post. To reply to the selected post please enter your administration password, your message and click the &quot;Post reply&quot; button.</div>
 
 	<div class="gbook_sign_text"><span class="gbook_entries"><b>Administration password:</b></span><br class="clear" />
     <input type="password" name="pass" size="45" /></div>
 
-	
+	<div class="clear"></div>
+
+	<div class="gbook_left"><span class="gbook_entries"><b>Comments:</b></span></div>
+
+	<textarea name="comments" rows="12" cols="57" id="cmnt"></textarea>
+
+	<!--BOTTOM IMAGES -->
+	<div id="gbook_bottom_images" class="gbook_bottom_images">
+
+	<a href="#" onclick="document.getElementById('cmnt').value += ' :D ';return false;"><img src="./templates/default/images/emoticons/bigsmile.gif"  alt=":D" title=":D" width="19" height="19" /></a>&nbsp;
+	<a href="#" onclick="document.getElementById('cmnt').value += ' :!cool: ';return false;"><img src="./templates/default/images/emoticons/cool.gif"  alt=":!cool:" title=":!cool:" width="19" height="19" /></a>&nbsp;
+	<a href="#" onclick="document.getElementById('cmnt').value += ' :!cry: ';return false;"><img src="./templates/default/images/emoticons/crying.gif"  alt=":!cry:" title=":!cry:" width="19" height="19" /></a>&nbsp;
+	<a href="#" onclick="document.getElementById('cmnt').value += ' :!devil: ';return false;"><img src="./templates/default/images/emoticons/devil.gif"  alt=":!devil:" title=":!devil:" width="19" height="19" /></a>&nbsp;
+	<a href="#" onclick="document.getElementById('cmnt').value += ' :) ';return false;"><img src="./templates/default/images/emoticons/smile.gif"  alt=":)" title=":)" width="19" height="19" /></a>&nbsp;
+    <a href="#" onclick="document.getElementById('cmnt').value += ' :!mad: ';return false;"><img src="./templates/default/images/emoticons/mad.gif"  alt=":!mad:" title=":!mad:" width="19" height="19" /></a>&nbsp;
+	<a href="#" onclick="document.getElementById('cmnt').value += ' :!thinking: ';return false;"><img src="./templates/default/images/emoticons/thinking.gif"  alt=":!thinking:" title=":!thinking:" width="19" height="19" /></a>&nbsp;
+	<a href="#" onclick="document.getElementById('cmnt').value += ' :p ';return false;"><img src="./templates/default/images/emoticons/tongueout.gif"  alt=":p" title=":p" width="19" height="19" /></a>&nbsp;
+	<a href="#" onclick="document.getElementById('cmnt').value += ' ;) ';return false;"><img src="./templates/default/images/emoticons/wink.gif"  alt=";)" title=";)" width="19" height="19" /></a>&nbsp;
+	<a href="#" onclick="document.getElementById('cmnt').value += ' :o ';return false;"><img src="./templates/default/images/emoticons/blush.gif"  alt=":o" title=":o" width="19" height="19" /></a>&nbsp;
+
+	<a href="javascript:openSmiley()" class="gbook_submitted">More</a><br />
+	<label><input type="checkbox" name="nosmileys" value="Y" class="gbook_checkbox"  /><span class="gbook_entries">Disable smileys</span></label><br class="clear" />
+
+	</div>
+	<!--BOTTOM IMAGES END -->
+
 	<div align="center">
 
 	<div class="clear">&nbsp;</div>
 
-    <input type="hidden" name="a" value="showEmail" />
-    <input type="hidden" name="num" value="97" />
-	<input type="submit" value="View e-mail address" class="submit" />
+    <input type="hidden" name="a" value="postreply" />
+    <input type="hidden" name="num" value="100" />
+	<input type="submit" value="Post reply" class="submit" />
 	</div>
 
     <p>&nbsp;</p>

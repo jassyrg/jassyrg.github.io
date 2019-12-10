@@ -405,7 +405,7 @@
         <!--NOTICE END -->
 
 <div id="gbook_guestbook" align="center">
-	<span class="gbook_guestbook">View e-mail address</span>
+	<span class="gbook_guestbook">Delete guestbook post</span>
 </div>
 
 <form action="gbook.php" method="post">
@@ -413,19 +413,21 @@
 <div id="gbook_entries">
 
 	
-    <div class="gbook_sign_text">Only guestbook owner may view e-mail addresses. To view contact e-mail please enter your administration password and click the &quot;View Email address&quot; button.</div>
+    <div class="gbook_sign_text">Only guestbook owner may delete posts. To delete selected post please enter your administration password and click the &quot;Delete this entry&quot; button to confirm your decision.</div>
 
 	<div class="gbook_sign_text"><span class="gbook_entries"><b>Administration password:</b></span><br class="clear" />
     <input type="password" name="pass" size="45" /></div>
 
-	
+			<div class="gbook_sign_text"><span class="gbook_entries"><b>Additional options:</b></span><br class="clear" />
+	    <label><input type="checkbox" name="addban" value="YES" class="gbook_checkbox" /> Ban this IP address</label></div>
+		
 	<div align="center">
 
 	<div class="clear">&nbsp;</div>
 
-    <input type="hidden" name="a" value="showEmail" />
+    <input type="hidden" name="a" value="confirmdelete" />
     <input type="hidden" name="num" value="97" />
-	<input type="submit" value="View e-mail address" class="submit" />
+	<input type="submit" value="Delete this entry" class="submit" />
 	</div>
 
     <p>&nbsp;</p>
