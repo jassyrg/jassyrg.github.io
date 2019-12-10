@@ -1,0 +1,445 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<link rel="shortcut icon" href="http://musicfamily.org/realm/Factions/picks/favicon.ico">
+<link rel="stylesheet" type="text/css" href="/realm/scripts/common.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="http://musicfamily.org/realm/scripts/jquery.style-my-tooltips.js"></script>
+<title>G00F's Not a Wiki </title>
+<meta charset="UTF-8">
+<meta name="keywords" content="Realm Grinder, Game, Artifact, Artifacts, Factions, Reincarnation, Challenges, Mercenary Builds, Mercenary, Research Builds, Research, Upgrades, Spells, Ascension, Ascension Builds, Prestige Research, Prestige, Prestige Builds, Kongregate, Trophies, Trophy, Faction Champion, Games, Coins, Treasure, Mana, Assistants, Gem, Gems,  Archaeology, Excavation, Ruby, Rubies, Lore Artifacts, Quest Artifacts, Fairy, Elf, Angel, Goblin, Undead, Demon, Titan, Druid, Faceless, Dwarf, Drow, Research, Notation, Premium Upgrades, Requirements, Final Reward, Reward"/>
+<style>
+        table.Faction {
+            border-collapse: collapse;
+        }
+        .Faction th,.Faction td {
+            border: 2px solid black;
+        padding: 3px;
+        }
+        .Faction td {
+            font-weight: bold
+        padding: 10px;
+        }
+       .gsc-cursor-page  {
+        padding-right: 10px;
+       }
+    </style>
+<style>
+        table.ManaColors {
+            border-collapse: collapse;
+        }
+        .ManaColors th,.ManaColors td {
+            border: 3px solid black;
+        }
+        .ManaColors td {
+            font-weight: bold
+        }
+       .gsc-cursor-page  {
+        padding: 4px;
+       }
+</style>
+<style>
+        table.numtable {
+            border-collapse: collapse;
+        }
+        .numtable tr:hover {
+            background-color: #ffffff
+        }
+        .numtable tr:hover {
+            background-color: #ffffff
+        }
+        .numtable th,.numtable td {
+            border: 3px solid #4c5b86;
+        }
+        .numtable td {
+            font-weight: bold
+        }
+       .gsc-cursor-page  {
+        padding: 4px;
+       }
+    </style>
+<style>
+    .black_overlay {
+        display: none;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        z-index: 1001;
+        -moz-opacity: 0.8;
+        opacity: .80;
+        filter: alpha(opacity=80);
+    }
+
+    .white_content {
+        display: none;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 99%;
+        height: 50%;
+        padding: 16px;
+        border: 1px solid orange;
+        background-color: white;
+        z-index: 1002;
+        overflow: auto;
+    }
+</style>
+
+<script>
+    $(document).ready(function () {
+        $("#Expand").on("hide.bs.collapse", function () {
+            $(".btn").html('<span class="glyphicon glyphicon-collapse-down"></span> Expand');
+        });
+        $("#Expand").on("show.bs.collapse", function () {
+            $(".btn").html('<span class="glyphicon glyphicon-collapse-up"></span> Collapse');
+        });
+    });
+</script>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            $("[research]").style_my_tooltips();
+        });
+    })(jQuery);
+</script>
+<script type="text/javascript">
+    function shohid(e) {
+        //$('.autohide').not(e.next()).hide();
+        $(e).parents('.autohide').show();
+        $(e).next().toggle();
+    }
+</script>
+<div id="outer">
+    <div id="parent">
+        <div id="header" align="center">
+        </div>
+    </div>
+    <div id="navbox">
+        <div class="menu">
+            <ul>
+                <li><a href="/realm/Challenges" research="A complete list of Challenges and their requirements in image map form">Challenges</a>
+                    <!--[if lte IE 6]>
+                    <a href="#">Category one
+                        <table>
+                            <tr>
+                                <td>
+                    <![endif]-->
+                    <ul>
+                        <li><a href="/realm/Fairy" research="All Fairy Challenges">Fairy</a>
+                        <li><a href="/realm/Elf" research="All Elf Challenges">Elf</a>
+                        <li><a href="/realm/Angel" research="All Angel Challenges">Angel</a>
+                        <li><a href="/realm/Goblin" research="All Goblin Challenges">Goblin</a>
+                        <li><a href="/realm/Undead" research="All Undead Challenges">Undead</a>
+                        <li><a href="/realm/Demon" research="All Demon Challenges">Demon</a>
+                        <li><a href="/realm/Titan" research="All Titan Challenges">Titan</a>
+                        <li><a href="/realm/Druid" research="All Druid Challenges">Druid</a>
+                        <li><a href="/realm/Faceless" research="All Faceless Challenges">Faceless</a>
+                        <li><a href="/realm/Dwarf" research="All Dwarf Challenges">Dwarfs</a>
+                        <li><a href="/realm/Drow" research="All Drow Challenges">Drow</a>
+                        <li><a href="/realm/Dragons" research="All Dragon Challenges">Dragons</a>
+                        <li><a href="/realm/Archon" research="All Archon Challenges">Archon</a>
+                        <li><a href="/realm/Djinn" research="All Djinn Challenges">Djinn</a>
+                        <li><a href="/realm/Makers" research="All Makers Challenges">Makers</a>
+                            <ul>
+                            </ul>
+                            <!--[if lte IE 6]>
+                            </td></tr></table>
+                            </a>
+                            <![endif]-->
+                        </li>
+                    </ul>
+                    <!--[if lte IE 6]>
+                    </td></tr></table>
+                    </a>
+                    <![endif]-->
+                </li>
+                <li><a href="/realm/TrophyPage" research="A complete list of Trophies and their requirements in image map form">Trophies</a>
+                    <!--[if lte IE 6]>
+                    <a href="#">Category two
+                        <table>
+                            <tr>
+                                <td>
+                    <![endif]-->
+                    <ul>
+                        <!--<li><a href="/realm/TipsHints" research="Tips & Hints">Tips & Hints</a></li>-->
+                        <li><a href="/realm/Coins" research="Coin Trophies">Coins</a></li>
+                        <li><a href="/realm/Treasure" research="Treasure Trophies">Treasure</a></li>
+                        <li><a href="/realm/ClickTrophies" research="Click Trophies">Clicks</a></li>
+                        <li><a href="/realm/EachBuilding" research="Each Building Trophies">Each Building</a></li>
+                        <li><a href="/realm/TotalBuildings" research="Total Buildings">Total Buildings</a></li>
+                        <li><a href="/realm/Mana" research="Mana, Arcane, Spell Upgrade Trophies">Magic</a></li>
+                        <li><a href="/realm/Spelltrophy" research="Spells Cast Trophies">Spell</a></li>
+                        <li><a href="/realm/FactionCoin" research="Faction Coin Trophies">Faction Coin</a></li>
+                        <li><a href="/realm/Assistant" research="Assistant Trophies">Assistant</a></li>
+                        <li><a href="/realm/TArtifacts" research="Artifact Trophies">Artifact</a></li>
+                        <li><a href="/realm/Gem" research="Gem Trophies">Gem</a></li>
+                        <li><a href="/realm/Ruby" research="Ruby Trophies">Ruby</a></li>
+                        <li><a href="/realm/Upgradetrophy" research="Upgrade Trophies">Upgrade</a></li>
+                        <li><a href="/realm/FactionChampion" research="Faction Champion Trophies">Faction Champion</a></li>
+                        <li><a href="/realm/GrandChampion" research="Grand Champion Trophies">Grand Champion</a></li>
+                        <li><a href="/realm/MercOath" research="Oath of the Mercenary">Merc Oath</a></li>
+                        <li><a href="/realm/RTrophies" research="Reincarnation Trophies">Reincarnation</a></li>
+                        <li><a href="/realm/Archaeology" research="Archaeology Trophies">Archaeology</a></li>
+                        <li><a href="/realm/Secret" research="Secret Trophies">Secret</a></li>
+                    </ul>
+                    <!--[if lte IE 6]>
+                    </td></tr></table>
+                    </a>
+                    <![endif]-->
+                </li>
+                <li><a href="/realm/Factions">Factions</a>
+                    <!--[if lte IE 6]>
+                    <a href="#">CATEGORY THREE
+                        <table>
+                            <tr>
+                                <td>
+                    <![endif]-->
+                    <ul>
+                        <li><a href="/realm/FairyFaction" research="Fairy">Fairy</a></li>
+                        <li><a href="/realm/ElfFaction" research="Elf">Elf</a></li>
+                        <li><a href="/realm/AngelFaction" research="Angel">Angel</a></li>
+                        <li><a href="/realm/GoblinFaction" research="Goblin">Goblin</a></li>
+                        <li><a href="/realm/UndeadFaction" research="Undead">Undead</a></li>
+                        <li><a href="/realm/DemonFaction" research="Demon">Demon</a></li>
+                        <li><a href="/realm/TitanFaction" research="Titan">Titan</a></li>
+                        <li><a href="/realm/DruidFaction" research="Druid">Druid</a></li>
+                        <li><a href="/realm/FacelessFaction" research="Faceless">Faceless</a></li>
+                        <li><a href="/realm/DwarfFaction" research="Dwarf">Dwarf</a></li>
+                        <li><a href="/realm/DrowFaction" research="Drow">Drow</a></li>
+                        <li><a href="/realm/DragonFaction" research="Dragon">Dragons</a></li>
+                        <li><a href="/realm/MercenaryFaction" research="Mercenary">Mercenary</a></li>
+                        <li><a href="/realm/ArchonFaction" research="Archon">Archon</a></li>
+                        <li><a href="/realm/DjinnFaction" research="Djinn">Djinn</a></li>
+                        <li><a href="/realm/MakersFaction" research="Makers">Makers</a></li>
+                    </ul>
+                    <!--[if lte IE 6]>
+                    </td></tr></table>
+                    </a>
+                    <![endif]-->
+                </li>
+                <li><a href="/realm/Artifacts" research="A complete list of Artifacts and their requirements in image map form">Artifacts</a>
+                    <!--[if lte IE 6]>
+                    <a href="#">category 4
+                        <table>
+                            <tr>
+                                <td>
+                    <![endif]-->
+                    <ul>
+                        <li><a href="/realm/QuestArtifacts/" research="Quest Artifacts">Quest Artifacts</a></li>
+                        <li><a href="/realm/LoreArtifacts/" research="Lore Artifacts">Lore Artifacts</a></li>
+                    </ul>
+                    <!--[if lte IE 6]>
+                    </td></tr></table>
+                    </a>
+                    <![endif]-->
+                </li>
+                <li><a href="/realm/Research">Research</a>
+                    <!--[if lte IE 6]>
+                    <a href="#">EXPLORER
+                        <table>
+                            <tr>
+                                <td>
+                    <![endif]-->
+                    <ul>
+                        <li><a href="/realm/ResearchFacilities" research="Research Facilities">Research</a>
+                            <ul>
+                                <li><a href="/realm/Spellcraft" research="Spellcraft">Spellcraft</a></li>
+                                <li><a href="/realm/Craftsmanship" research="Craftsmanship">Craftsmanship</a></li>
+                                <li><a href="/realm/Divine" research="Divine">Divine</a></li>
+                                <li><a href="/realm/Economics" research="Economics">Economics</a></li>
+                                <li><a href="/realm/Alchemy" research="Alchemy">Alchemy</a></li>
+                                <li><a href="/realm/Warfare" research="Warfare">Warfare</a></li>
+                            </ul>
+                        <li><a href="/realm/Researchtree" research="Researchtree">Research Tree</a></li>
+                        <li><a href="/realm/UniqueBuilding" research="UniqueBuilding">Unique Buildings</a></li>
+                        <li><a href="/realm/ResearchUpgrades" research="Research Upgrades">Upgrades</a>
+                            <ul>
+                                <li><a href="/realm/ResearchAssistantUpgrades" research="Assistant Upgrades">Assistant</a></li>
+                                <li><a href="/realm/ResearchManaUpgrades" research="Mana Upgrades">Mana</a></li>
+                                <li><a href="/realm/ResearchSpellUpgrades" research="Spell Upgrades">Spell</a></li>
+                                <li><a href="/realm/ResearchFactionCoinUpgrades" research="Faction Coin Find Chance Upgrades">Faction Coin Find Chance</a></li>
+                                <li><a href="/realm/ResearchUniqueBuildingUpgrades/" research="Unique Building Upgrades">Unique Building</a>
+                                <li><a href="/realm/ResearchBuildingBasedOnUB/" research="Building Upgrades based on Unique Buildings">Building-UB</a>
+                                <li><a href="/realm/ResearchNonUniqueUpgrades/" research="Non-Unique Building Upgrades slots">Non-Unique Building</a>
+                                <li><a href="/realm/ResearchNeutralBuildingUpgrades/" research="Neutral Building Upgrades">Neutral Building</a>
+                                <li><a href="/realm/ResearchAllBuildingUpgrades/" research="All other Building Upgrades">All Building</a>
+                                <li><a href="/realm/ResearchClickRewardUpgrades/" research="Click Reward Upgrades">Click Reward</a>
+                                <li><a href="/realm/ResearchGemBonusUpgrades/" research="Gem Upgrades">Gem Upgrades</a>
+                            </ul>
+                    </ul>
+                    <!--[if lte IE 6]>
+                    </td></tr></table>
+                    </a>
+                    <![endif]-->
+                </li>
+                <li><a href="/realm/Notation">Notation</a>
+                    <!--[if lte IE 6]>
+                    </td></tr></table>
+                    </a>
+                    <![endif]-->
+                </li>
+                <li><a href="/realm/PremiumUpgrades/">Premium</a>
+                    <!--[if lte IE 6]>
+                    </td></tr></table>
+                    </a>
+                    <![endif]-->
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="parent">
+        <div id="leftcolumn">
+            <div id="leftbox">
+            </div>
+            <div id="navcontainer">
+                <ul id="navlist">
+                  <li id="active"><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHJwYJKoZIhvcNAQcEoIIHGDCCBxQCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYABBed3WDi1lVV5pb+JKKoYxXUQAMvwYA+htRxJfFiGAMlMqfmaPiuCsUi++mOPAcx0wTGPbNZFt5j3GzM1PtKo7Ag7X06KwgnuGTc2M6N9wRsWTSUjVsZ5tw0cWlxCWj1CC0bzp373SfqYtypUH5XsY5G+XS55/GoZzF98vDuvMTELMAkGBSsOAwIaBQAwgaQGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIcDGWTXI8JiWAgYBzhzJtHTz8vZAY7UXlviKEHTZcr2ZwfsZgLTdzWsRGDwCslcnt7a7X1OVJWCHY6B8En5HibuEly48lX7LTL/IVQJKo9Jy2Z+w7RYLRZRRmKnlO36w+NoYeEXcWBrTiwFMWTc2whdE8/edgCtJqdCBqqYzINIyoIom44F3wRV0NEKCCA4cwggODMIIC7KADAgECAgEAMA0GCSqGSIb3DQEBBQUAMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbTAeFw0wNDAyMTMxMDEzMTVaFw0zNTAyMTMxMDEzMTVaMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAwUdO3fxEzEtcnI7ZKZL412XvZPugoni7i7D7prCe0AtaHTc97CYgm7NsAtJyxNLixmhLV8pyIEaiHXWAh8fPKW+R017+EmXrr9EaquPmsVvTywAAE1PMNOKqo2kl4Gxiz9zZqIajOm1fZGWcGS0f5JQ2kBqNbvbg2/Za+GJ/qwUCAwEAAaOB7jCB6zAdBgNVHQ4EFgQUlp98u8ZvF71ZP1LXChvsENZklGswgbsGA1UdIwSBszCBsIAUlp98u8ZvF71ZP1LXChvsENZklGuhgZSkgZEwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tggEAMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADgYEAgV86VpqAWuXvX6Oro4qJ1tYVIT5DgWpE692Ag422H7yRIr/9j/iKG4Thia/Oflx4TdL+IFJBAyPK9v6zZNZtBgPBynXb048hsP16l2vi0k5Q2JKiPDsEfBhGI+HnxLXEaUWAcVfCsQFvd2A1sxRr67ip5y2wwBelUecP3AjJ+YcxggGaMIIBlgIBATCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwCQYFKw4DAhoFAKBdMBgGCSqGSIb3DQEJAzELBgkqhkiG9w0BBwEwHAYJKoZIhvcNAQkFMQ8XDTE4MDMyOTEwNDMzMlowIwYJKoZIhvcNAQkEMRYEFBjsXbW7ntttO6jWnQyxxbGxQxK7MA0GCSqGSIb3DQEBAQUABIGAiWv748Lds8X4GoPOpfiDzdc0Fue/FXeUKsMAVnAcNuBolecQvJuOCvFAAfGxKtYk9MlJHRhn+GWPrWStmE+i1ptRh9rgeTrZ/BeHR8wyOMq7dGhEkQpvj4pZP1Pf4AmA0nse87p8e77itIiZ/0tYb+yh4hcw9Ij2jo80j8VwJ/A=-----END PKCS7-----
+">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+                    <li id="active"><a href="/realm" id="current">Home</a></li>
+                    <li id="active"><a href="/realm/GuestBook/gbook.php" id="current">G00F's not a Guest Book</a></li>
+                    <li id="active"><a href="/realm/SiteMap/" id="current">Sitemap</a></li>
+                    <li id="active"><a href="/realm/RNG/" id="current">Random Number Generator</a></li>
+                    <li id="active"><a href="/realm/Changes/" id="current">Latest Major Patch</a></li>
+                    <li id="active"><a href="https://discord.gg/cq6zmQX" id="current">Official Realm Grinder Discord</a></li>
+                    <P align="center"><b>The Game</b>
+                      <li id="active"><a href="/realm/Terminology">Terminology HotKeys</a></li>
+                    <li id="active"><a href="/realm/GameWindow">Game Window</a></li>
+                    <li id="active"><a href="/realm/Reset">Abdication<br/>Reincarnation<br/>Ascension</a></li>
+                    <li id="active"><a href="/realm/TrophyPage" reserach="A complete list of Trophies">Trophy Page</a></li>
+                    <li id="active"><a href="/realm/TrophyGuide">Trophy Guide</a></li>
+                    <li id="active"><a target="_blank" href="https://steamcommunity.com/sharedfiles/filedetails/?id=1118498519">Beginners Guide </a></li>
+                    <li id="active"><a href="/realm/R16Guide">R16 Research Guide</a></li>
+                    <li id="active"><a href="/realm/UsefulTables">Useful Tables</a></li>
+                    <li id="active"><a target="_blank" research="R0 - R39 Guide" href="/realm/A0_Plot.png">A0 Plot</a></li>
+                    <li id="active"><a target="_blank" research="R40 - R99 Guide" href="/realm/A1_Plot.png">A1 Plot</a></li>
+                    <li id="active"><a href="/realm/Rubies">Rubies</a></li>
+                    <li id="active"><a href="/realm/Events">Events</a></li>
+                    <li id="active"><a href="/realm/BuildingAlignments">Building Alignments</a></li>
+                    <li id="active"><a href="/realm/Changelog">Changelog</a></li>
+                    <li id="active"><a href="/realm/PremiumUpgrades">Premium Upgrades</a></li>
+                    <li id="active"><a href="/realm/Notation">Notation</a></li>
+                    <li id="active"><a href="/realm/Kong">Kongregate Links</a></li>
+                    <li id="active"><a href="/realm/Tools">Realm Grinder Tools</a></li>
+                    <li id="active"><a href="/realm/BrowserIssues">Browser Issues</a></li>
+                    <li id="active"><a href="/realm/WallofShame">Wall of Shame</a></li>
+                    <P align="center">Upgrades
+                    <li id="active"><a href="/realm/Upgrades">Upgrades</a></li>
+                    <li id="active"><a href="/realm/BuildingUpgrades">Building Upgrades</a></li>
+                    <li id="active"><a href="/realm/Factions">Factions</a></li>
+                    <li id="active"><a href="/realm/FactionUpgrades">Faction Upgrades</a></li>
+                    <li id="active"><a href="/realm/Heritages">Heritages</a></li>
+                    <li id="active"><a href="/realm/Artifacts/">Artifacts</a></li>
+                    <li id="active"><a href="/realm/Challenges/">Challenges</a></li>
+                    <li id="active"><a href="/realm/Bloodline">Bloodlines</a></li>
+                    <li id="active"><a href="/realm/Research">Research</a></li>
+                    <li id="active"><a href="/realm/Researchtree">Research Tree</a></li>
+                    <li id="active"><a href="/realm/Lineages">Lineages</a></li>
+                    <li id="active"><a href="/realm/MercResearch">Mercenary Research</a></li>
+                    <li id="active"><a href="/realm/Ascension2">Ascension 2</a></li>
+                    <li id="active"><a href="/realm/ArtifactSet">Artifact Sets</a></li>
+                    <li id="active"><a href="/realm/Spells">Spells and Tier Upgrades</a></li>
+                    <li id="active"><a href="/realm/SunForce">Sun Force</a></li>
+                    <P align="center">Builds
+                    <li id="active"><a href="/realm/MercBuilds">Mercenary Builds</a></li>
+                    <li id="active"><a href="/realm/ResearchBuilds" research="R16-R29">Research Builds</a></li>
+                    <li id="active"><a href="/realm/PBuilds" research="R29-R39">Prestige Builds</a></li>
+                    <li id="active"><a href="/realm/R40-R46" research="Ascension 1">R40-R46 Builds</a></li>
+                    <li id="active"><a href="/realm/R47-R60" research="Dragons">R47-R59 Builds</a></li>
+                    <li id="active"><a href="/realm/R60-R75" research="Lineages">R60-R75 Builds</a></li>
+                    <li id="active"><a href="/realm/R75Plus" research="Mercenary Research">R75-R99 Builds</a></li>
+                    <!--<li id="active"><a href="/realm/R90Plus" research="Veteran Figurine">R90-99 Builds</a></li>-->
+                    <li id="active"><a href="/realm/R100Plus" research="Ascension 2">R100-R115 Builds</a></li>
+                    <li id="active"><a href="/realm/R116Plus" research="Prestige Ascension 2">R116-R125 Builds</a></li>
+                    <li id="active"><a href="/realm/R125Plus" research="Elite Factions">R125-R135 Builds</a></li>
+                    <li id="active"><a href="/realm/R135Plus" research="Elite Challenges">R135-R159 Builds</a></li>
+                    <li id="active"><a href="/realm/R160Plus" research="A3 Mercenaries">R160+ Builds</a></li>
+
+                    </ul>
+                    </div>
+                    </div>
+                    <div id="rightcolumn">
+                    <div class="rightbox">
+                  <div class="rightboxcontent">
+                        <a href="https://discord.gg/cq6zmQX" research="Click to join Realm Grinder Chat on Discord"><img src="http://musicfamily.org/realm/Factions/picks/RealmGrinderGameRL.png"></img></a>
+                    </div>
+                    </div>
+<h6><a href="/realm/ResearchFacilities/"><img src="http://musicfamily.org/realm/Factions/picks/ResearchTopPage.png"></h6></a>
+<h6>Divine Facilities</h6>
+<p><img src="http://musicfamily.org/realm/Factions/picks/Diviner.png" alt="Divine" align="middle"> <b>Divine</b></p>
+<p>Harness the power of the eternals, increasing your spell affinity and bestowing Divine power on all your productivity.</p>
+<p><b>Increases</B>: <b>Angel</B>, <b>Faceless</B>, and <b>Dwarven</B> production.</p>
+<p>Pointing to this ingame will tell you how many slots are available also tells you your total research points.</p>
+<br/>
+<p><b>Research Point Production</b>
+<p><b>Formula</b>: 100000 * (1 + 0.01 * x ^ 0.7), where x is RP total of facility affinities.</p>
+<br/>
+<p><b>D1</b> - For <b>Angel</b> - Research Name: <b>Blessing</b><p><b>Cost</b>: 750 Qag (7.50E125)</b><p><b>Effect</b>: Increase the production of Heaven's Domains based on total time spent with at least one active spell.</b><p><b>Formula</b>: round(2.5 * x ^ 0.8)%, where x is total time spent with at least one active spell.</p>
+<br/>
+<p><b>D10</b> - For <b>Demon</b> - Research Name: <b>Inflame</b><p><b>Requirement</b>: 2,000 Infernal Realms</b><p><b>Cost</b>: 28.83 Uqag (2.883E127)</b><p><b>Effect</b>: Increase the production of all other buildings by 110% per Infernal Realm you own.</p>
+<br/>
+<p><b>D25</b> - For <b>Undead</b> - Research Name: <b>Cursing</b><p><b>Requirement</b>: Play 8 hours Offline (as Undead) (This Game) </b><p><b>Cost</b>: 12.63 Dqag (1.263E130)</b><p><b>Effect</b>: Increase the production of all buildings based on your offline production bonus.</b><p><b>Formula</b>: (2.75 * log10(1 + x) ^ 2.75)%, where x is your offline production bonus multiplier.</p>
+<br/>
+<p><b>D50</b> - For <b>Elf</b> - Research Name: <b>Hallowing</b><p><b>Requirement</b>: 15,000 Good Buildings(as Angel)</b><p><b>Cost</b>: 318.8 Tqag (3.188E134)</b><p><b>Effect</b>: Increase your chance to find Faction Coins based on the amount of Elven Training Grounds you own.</b><p><b>Formula</b>: floor(1.5 * x ^ 1.05)%, where x is the number of Elven Training Grounds you own.</p>
+<br/>
+<p><b>D55</b> - For <b>All Factions</b> - Research Name: <b>Transfixion</b><p><b>Requirement</b>: Produce 3 M (3E6) Mana (This Game)</b><p><b>Cost</b>: 2.421 Qaqag (2.421E135)</b><p><b>Effect</b>: Increase clicking reward based on spell cast in this game.</b><p><b>Formula</b>: round(3.5 * x ^ 0.8)%, where x is your Spells Cast (This Game) stat.</p>
+<br/>
+<p><b>D135</b> - For <b>All Factions</b> - Research Name: <b>Illumination</b><p><b>Requirement</b>: 250 m/s Mana Regen(as Angel)</b><p><b>Cost</b>: 296 Ocqag (2.96E149)</b><p><b>Effect</b>: Increases mana regeneration based on the amount of gems you own.</b><p><b>Formula</b>: floor(1.25 * ln(1 + x)) / 10), where x is amount of gems you own.</p>
+<br/>
+<p><b>D150</b> - For <b>All Factions</b> - Research Name: <b>Retribution</b><p><b>Requirement</b>: Research Betrayal (W120) &amp; Transfixion (D55).</b><p><b>Cost</b>: 129.6 Noqag (1.296E152)</b><p><b>Effect</b>: Increase chance to find faction coins based on the amount of research made.</b><p><b>Formula</b>: floor(x ^ 1.25), where x is the amount of research made.</p>
+<br/>
+<p><b>D175</b> - For <b>Angel</b> - Research Name: <b>Resurrection</b><p><b>Requirement</b>: Research Blessing (D1) &amp; Refraction (A55)</b><p><b>Cost</b>: 3.273 Uqig (3.273E156)</b><p><b>Effect</b>: You gain additional assistants based on God's Hands activity time. (This R) </b><p><b>Formula</b>: floor(1.5 * x ^ 0.75), where x is God's Hands Cast Time Activity (This R).</p>
+<br/>
+<p><b>D200</b> - For <b>All Factions</b> - Research Name: <b>Transcendence</b><p><b>Requirement</b>: Research Resurrection (D175) &amp; Illumination (D135)</b><p><b>Cost</b>: 82.65 Dqig (8.265E160)</b><p><b>Effect</b>: Decrease the </b><p><b>Cost</b> of all spells by 20% and increase their duration by 20%.</p>
+<br/>
+<p><b>D205</b> - For <b>All Good Factions</b> - Research Name: <b>Communion</b><p><b>Requirement</b>: 777 Holy Lights (Total this R),Research Gemcutting (C175) &amp; Illumination (D135)</b><p><b>Cost</b>: 627.6 Dqig (6.276E161)</b><p><b>Effect</b>: Increase Holy Light duration by 300 seconds.</p>
+<br/>
+<p><b>D225</b> - For <b>Fairy</b> - Research Name: <b>Weather Control</b><p><b>Requirement</b>: Research Light Condenser (C25) &amp; Vacuumancy (S30)</b><p><b>Cost</b>: 2.087 Qaqig (2.087E165)</b><p><b>Effect</b>: Increase the production of Enchanted Fields based on maximum mana.</b><p><b>Formula</b>: floor(2.25 * x ^ 0.8)%, where x is your maximum mana.</p>
+<br/>
+<p><b>D245</b> - For <b>All Factions</b> - Research Name: <b>Sanctification</b><p><b>Requirement</b>: 500 Spiritual Surge (Total this R), Research Soulweaving (A175) &amp; Necromancy (S225)</b><p><b>Cost</b>: 6.94Qiqig (6.94E168)</b><p><b>Effect</b>: Increase the production of Unique Buildings based on the amount of Non-Unique Buildings you own.</b><p><b>Formula</b>: (2.5 * x ^ 0.55), where x is the amount of Non-Unique Buildings you own.</p>
+<br/>
+<p><b>D250</b> - For <b>All Factions</b> - Research Name: <b>Demonology</b><p><b>Requirement</b>: Research Transcendence (D200) &amp; Pyromancy (S150)</b><p><b>Cost</b>: 52.7 Qiqig (5.27E169)</b><p><b>Effect</b>: Gain additional assistants based on the amount of Faction Coins found in this game.</b><p><b>Formula</b>: floor(ln(1 + x) ^ 1.5), where x is your Faction Coins Gained (This Game) stat.</p>
+<br/>
+<p><b>D260</b> - For <b>Faceless</b> - Research Name: <b>Mutation</b><p><b>Requirement</b>: 3,000 Sunken Cities</b><p><b>Cost</b>: 3.039 SxQig (3.039E171)</b><p><b>Effect</b>: Increase the production of all other buildings by 95% per Sunken Cities you own.</p>
+<br/>
+<p><b>D275</b> - <b>Druid</b> - Research Name: <b>Meditation</b><p><b>Requirement</b>: Have 10,000 Mana (as Druid)</b><p><b>Cost</b>: 1.331 SpQig (1.331E174)</b><p><b>Effect</b>: Increase mana regeneration based on your current mana. </b><p><b>Effect</b>: Also increases offline spell cast amount multiplicatively by 300%.</b><p><b>Formula</b>: (0.35 * x ^0.35 + 0.035 * log(x) ^3.5), where x is max mana.</p>
+<br/>
+<p><b>D290</b> - For <b>All Factions</b> - Research Name: <b>Transubstantiation</b><p><b>Requirement</b>: 1 Rough Stone Artifact</b><p><b>Cost</b>: 582.7 SpQig (5.827E176)</b><p><b>Effect</b>: Each artifact you discover increases Maximum Mana additively and multiplicatively.Additive </b><p><b>Formula</b>: (50 * x ^1.1), where x is the number of artifacts found.Multiplicative </b><p><b>Formula</b>: (0.45 * x ^ 1.1), where x is the number of artifacts found.</p>
+<br/>
+<p><b>D320</b> - For <b>All Factions</b> - Research Name: <b>Deliverance</b><p><b>Requirement</b>: 350 m/s Mana Regen</b><p><b>Cost</b>: 1.117 NoQig (1.117E180)</b><p><b>Effect</b>: Increase assistants production based on mana regeneration.</b><p><b>Formula</b>: round(20 * x ^ 0.85)%, where x is your Mana per Second stat.</p>
+<br/>
+<p><b>D330</b> - For <b>All Factions</b> - Research Name: <b>Eternity</b><p><b>Requirement</b>: Research Offering (E275) &amp; Deliverance (D320)</b><p><b>Cost</b>: 6.443 Sxg (6.443E183)</b><p><b>Effect</b>: Double the duration of all faction spells.</p>
+<br/>
+<p><b>D350</b> - For <b>Titan</b> - Research Name: <b>Descent</b><p><b>Requirement</b>: Research Swarming (W250) &amp; Heroism (W330)</b><p><b>Cost</b>: 21.42 USxg (2.142E187)</b><p><b>Effect</b>: Gain additional assistants based on the amount of Olympian Halls you own.</b><p><b>Formula</b>: floor(x ^ 0.5)%, where x is the number of Olympian Halls you own.</p>
+<br/>
+<p><b>D400</b> - For <b>All Factions</b> - Research Name: <b>Miracle</b><p><b>Requirement</b>: Research Communion (D205) &amp; Transubstantiation (D290)</b><p><b>Cost</b>: 13.66 QaSxg (1.366E196)</b><p><b>Effect</b>: Increase the Production of a random building by x250. Target changes every 2 minutes. While offline, increase the production of all buildings by x75.</p>
+<br/>
+<p><b>D435</b> - For <b>Dwarf</b> - Research Name: <b>Devotion</b><p><b>Requirement</b>: 14400s (4 hour) Diamond Pickaxe Cast Time (This Game) </b><p><b>Cost</b>: 19.89 SxSxg (1.989E202)</b><p><b>Effect</b>: Increase the production of Good buildings based on spells cast in this game.</b><p><b>Formula</b>: (2.5 * x ^ 0.85)%, where x is your Spells Cast (This Game) stat.</p>
+<br/>
+<p><b>D480</b> - For <b>All Factions</b> - Research Name: <b>Mercy</b><p><b>Requirement</b>: 12h Spent as each Good, Evil and Neutral alignment (This R)</b><p><b>Cost</b>: 1.67 NoSxg (1.67E210)</b><p><b>Effect</b>: Increase the production of all buildings based on the difference in time spent with the three alignments. A smaller difference produces a higher bonus.</b><p><b>Formula</b>: (100000 * (tmin / tmax) ^ 1.5)%, where tmin is shortest Time Spent Being Alignment and tmax is longest Time Spent Being Alignment (Total) Stat." coords="314,657,361,704" shape="rect">
+<br/>
+<p><b>D525</b> - For <b>Good</b> - Research Name: <b>Purity</b><p><b>Requirement</b>: 1d12h as Good (This R), Research Communion (D205) and Devotion (D435) </b><p><b>Cost</b>: 140.2 USpg (1.402E218)</b><p><b>Effect</b>: Increase Holy Light multiplier based on the amount of times you cast your faction spell in this game.</b><p><b>Formula</b>: (300 * x ^ 0.3)%, where x is your Faction Spells' Cast This Game stat.</p>
+<br/>
+<p><b>D560</b> - For <b>Drow</b> - Research Name: <b>Ritualism</b><p><b>Requirement</b>: Research Necromancy(S225) and Heirlooms(S500)(as drow)</b><p><b>Cost</b>: 204.2 TSpq (2.042E224)</b><p><b>Effect</b>: Increase mana regeneration based on the amount of trophies you unlocked.</b><p><b>Formula</b>: (floor(0.7 * x) / 10), where x is the amount of Trophies Unlocked.</p>
+<br/>
+<p><b>D590</b> - For <b>Angel,Dwarf</b> - Research Name: <b>Dispelling</b><p><b>Requirement</b>: 200 Dwarf Exchanges as Dwangel, Research Shattering (W320) and Waste (A480)</b><p><b>Cost</b>: 39.16 QiSpg (3.916E229)</b><p><b>Effect</b>: Increase the production of Unique buildings based on mana regeneration.</b><p><b>Formula</b>: (2.5 x ^ 1.25)%, where x is your Mana per Second stat.</p>
+<br/>
+<p><b>D1125</b> - For <b>Neutral,Dragon</b> - Research Name: <b>Oblation</b><p><b>Requirement</b>: Any Neutral,Build Dragons' Unique Building</b><p><b>Cost</b>: 177.2 Nod (1.772e62)</b><p><b>Effect</b>: Increase the production of Wyrm's Den based on Faction Coin find chance.</b><p><b>Formula</b>: 1.55*x^0.55, where x is Faction Coin find chance in percent.</p>
+<br/>
+<p><b>D1275</b> - For <b>All Factions</b> - Research Name: <b>Solemnity</b><p><b>Requirement</b>: 100000 Total Buildings</b><p><b>Cost</b>: 152.4 Dvg (1.524e71)</b><p><b>Effect</b>: Increase the production of each building by +0.3% per building of the same type.</p>
+<br/>
+<p><b>D1375</b> - For <b>All Factions</b> - Research Name: <b>Soulrending</b><p><b>Requirement</b>: 604800s 7 days spent as good (Across all Rs)</b><p><b>Cost</b>: 137.8 Qavg (1.378e77)</b><p><b>Effect</b>: Ascensions count 50% more for Spiritual Surge.</p>
+<br/>
+<p><b>D2775</b> - For <b>Mercenary</b> - Research Name: <b>Intervention</b><p><b>Requirement</b>: Secrets of the Warriors. </b><p><b>Cost</b>: 33.73 DQig (3.373e160)</b><p><b>Effect</b>: Increases the production of Unique Building based on time spent with Mercenaries.</b><p><b>Formula</b>: (10 * x ^ 0.7)%, where x is time spent with Mercenary.</p>
+<br/>
+<p><b>D3350</b> - For <b>All Factions</b> - Research Name: <b>Vampirism</b><p><b>Requirement</b>: 100 Sp% (1e26%) offline bonus, (Intervention D2775) and (Upheaval W3150).  </b><p><b>Cost</b>: 598.3 TSxg (5.983e194)</b><p><b>Effect</b>: Increase assistants additively and multiplicatively based on your Offline Bonus.</b><p><b>Additive Formula</b>: (3.25 * log10(1 + x) ^ 2.25), where x is your Offline Bonus.</b><p><b>Multiplicative Formula</b>: (0.05 * log10(1 + x) ^ 2), where x is your Offline Bonus.</p>

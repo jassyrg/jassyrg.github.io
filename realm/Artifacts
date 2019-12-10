@@ -1,0 +1,868 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<link rel="shortcut icon" href="http://musicfamily.org/realm/Factions/picks/favicon.ico">
+<link rel="stylesheet" type="text/css" href="/realm/scripts/common.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="http://musicfamily.org/realm/scripts/jquery.style-my-tooltips.js"></script>
+<title>G00F's Not a Wiki </title>
+<meta charset="UTF-8">
+<meta name="keywords" content="Realm Grinder, Game, Artifact, Artifacts, Factions, Reincarnation, Challenges, Mercenary Builds, Mercenary, Research Builds, Research, Upgrades, Spells, Ascension, Ascension Builds, Prestige Research, Prestige, Prestige Builds, Kongregate, Trophies, Trophy, Faction Champion, Games, Coins, Treasure, Mana, Assistants, Gem, Gems,  Archaeology, Excavation, Ruby, Rubies, Lore Artifacts, Quest Artifacts, Fairy, Elf, Angel, Goblin, Undead, Demon, Titan, Druid, Faceless, Dwarf, Drow, Research, Notation, Premium Upgrades, Requirements, Final Reward, Reward"/>
+<style>
+        table.Faction {
+            border-collapse: collapse;
+        }
+        .Faction th,.Faction td {
+            border: 2px solid black;
+        padding: 3px;
+        }
+        .Faction td {
+            font-weight: bold
+        padding: 10px;
+        }
+       .gsc-cursor-page  {
+        padding-right: 10px;
+       }
+    </style>
+<style>
+        table.ManaColors {
+            border-collapse: collapse;
+        }
+        .ManaColors th,.ManaColors td {
+            border: 3px solid black;
+        }
+        .ManaColors td {
+            font-weight: bold
+        }
+       .gsc-cursor-page  {
+        padding: 4px;
+       }
+</style>
+<style>
+        table.numtable {
+            border-collapse: collapse;
+        }
+        .numtable tr:hover {
+            background-color: #ffffff
+        }
+        .numtable tr:hover {
+            background-color: #ffffff
+        }
+        .numtable th,.numtable td {
+            border: 3px solid #4c5b86;
+        }
+        .numtable td {
+            font-weight: bold
+        }
+       .gsc-cursor-page  {
+        padding: 4px;
+       }
+    </style>
+<style>
+    .black_overlay {
+        display: none;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        z-index: 1001;
+        -moz-opacity: 0.8;
+        opacity: .80;
+        filter: alpha(opacity=80);
+    }
+
+    .white_content {
+        display: none;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 99%;
+        height: 50%;
+        padding: 16px;
+        border: 1px solid orange;
+        background-color: white;
+        z-index: 1002;
+        overflow: auto;
+    }
+</style>
+
+<script>
+    $(document).ready(function () {
+        $("#Expand").on("hide.bs.collapse", function () {
+            $(".btn").html('<span class="glyphicon glyphicon-collapse-down"></span> Expand');
+        });
+        $("#Expand").on("show.bs.collapse", function () {
+            $(".btn").html('<span class="glyphicon glyphicon-collapse-up"></span> Collapse');
+        });
+    });
+</script>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            $("[research]").style_my_tooltips();
+        });
+    })(jQuery);
+</script>
+<script type="text/javascript">
+    function shohid(e) {
+        //$('.autohide').not(e.next()).hide();
+        $(e).parents('.autohide').show();
+        $(e).next().toggle();
+    }
+</script>
+<div id="outer">
+    <div id="parent">
+        <div id="header" align="center">
+        </div>
+    </div>
+    <div id="navbox">
+        <div class="menu">
+            <ul>
+                <li><a href="/realm/Challenges" research="A complete list of Challenges and their requirements in image map form">Challenges</a>
+                    <!--[if lte IE 6]>
+                    <a href="#">Category one
+                        <table>
+                            <tr>
+                                <td>
+                    <![endif]-->
+                    <ul>
+                        <li><a href="/realm/Fairy" research="All Fairy Challenges">Fairy</a>
+                        <li><a href="/realm/Elf" research="All Elf Challenges">Elf</a>
+                        <li><a href="/realm/Angel" research="All Angel Challenges">Angel</a>
+                        <li><a href="/realm/Goblin" research="All Goblin Challenges">Goblin</a>
+                        <li><a href="/realm/Undead" research="All Undead Challenges">Undead</a>
+                        <li><a href="/realm/Demon" research="All Demon Challenges">Demon</a>
+                        <li><a href="/realm/Titan" research="All Titan Challenges">Titan</a>
+                        <li><a href="/realm/Druid" research="All Druid Challenges">Druid</a>
+                        <li><a href="/realm/Faceless" research="All Faceless Challenges">Faceless</a>
+                        <li><a href="/realm/Dwarf" research="All Dwarf Challenges">Dwarfs</a>
+                        <li><a href="/realm/Drow" research="All Drow Challenges">Drow</a>
+                        <li><a href="/realm/Dragons" research="All Dragon Challenges">Dragons</a>
+                        <li><a href="/realm/Archon" research="All Archon Challenges">Archon</a>
+                        <li><a href="/realm/Djinn" research="All Djinn Challenges">Djinn</a>
+                        <li><a href="/realm/Makers" research="All Makers Challenges">Makers</a>
+                            <ul>
+                            </ul>
+                            <!--[if lte IE 6]>
+                            </td></tr></table>
+                            </a>
+                            <![endif]-->
+                        </li>
+                    </ul>
+                    <!--[if lte IE 6]>
+                    </td></tr></table>
+                    </a>
+                    <![endif]-->
+                </li>
+                <li><a href="/realm/TrophyPage" research="A complete list of Trophies and their requirements in image map form">Trophies</a>
+                    <!--[if lte IE 6]>
+                    <a href="#">Category two
+                        <table>
+                            <tr>
+                                <td>
+                    <![endif]-->
+                    <ul>
+                        <!--<li><a href="/realm/TipsHints" research="Tips & Hints">Tips & Hints</a></li>-->
+                        <li><a href="/realm/Coins" research="Coin Trophies">Coins</a></li>
+                        <li><a href="/realm/Treasure" research="Treasure Trophies">Treasure</a></li>
+                        <li><a href="/realm/ClickTrophies" research="Click Trophies">Clicks</a></li>
+                        <li><a href="/realm/EachBuilding" research="Each Building Trophies">Each Building</a></li>
+                        <li><a href="/realm/TotalBuildings" research="Total Buildings">Total Buildings</a></li>
+                        <li><a href="/realm/Mana" research="Mana, Arcane, Spell Upgrade Trophies">Magic</a></li>
+                        <li><a href="/realm/Spelltrophy" research="Spells Cast Trophies">Spell</a></li>
+                        <li><a href="/realm/FactionCoin" research="Faction Coin Trophies">Faction Coin</a></li>
+                        <li><a href="/realm/Assistant" research="Assistant Trophies">Assistant</a></li>
+                        <li><a href="/realm/TArtifacts" research="Artifact Trophies">Artifact</a></li>
+                        <li><a href="/realm/Gem" research="Gem Trophies">Gem</a></li>
+                        <li><a href="/realm/Ruby" research="Ruby Trophies">Ruby</a></li>
+                        <li><a href="/realm/Upgradetrophy" research="Upgrade Trophies">Upgrade</a></li>
+                        <li><a href="/realm/FactionChampion" research="Faction Champion Trophies">Faction Champion</a></li>
+                        <li><a href="/realm/GrandChampion" research="Grand Champion Trophies">Grand Champion</a></li>
+                        <li><a href="/realm/MercOath" research="Oath of the Mercenary">Merc Oath</a></li>
+                        <li><a href="/realm/RTrophies" research="Reincarnation Trophies">Reincarnation</a></li>
+                        <li><a href="/realm/Archaeology" research="Archaeology Trophies">Archaeology</a></li>
+                        <li><a href="/realm/Secret" research="Secret Trophies">Secret</a></li>
+                    </ul>
+                    <!--[if lte IE 6]>
+                    </td></tr></table>
+                    </a>
+                    <![endif]-->
+                </li>
+                <li><a href="/realm/Factions">Factions</a>
+                    <!--[if lte IE 6]>
+                    <a href="#">CATEGORY THREE
+                        <table>
+                            <tr>
+                                <td>
+                    <![endif]-->
+                    <ul>
+                        <li><a href="/realm/FairyFaction" research="Fairy">Fairy</a></li>
+                        <li><a href="/realm/ElfFaction" research="Elf">Elf</a></li>
+                        <li><a href="/realm/AngelFaction" research="Angel">Angel</a></li>
+                        <li><a href="/realm/GoblinFaction" research="Goblin">Goblin</a></li>
+                        <li><a href="/realm/UndeadFaction" research="Undead">Undead</a></li>
+                        <li><a href="/realm/DemonFaction" research="Demon">Demon</a></li>
+                        <li><a href="/realm/TitanFaction" research="Titan">Titan</a></li>
+                        <li><a href="/realm/DruidFaction" research="Druid">Druid</a></li>
+                        <li><a href="/realm/FacelessFaction" research="Faceless">Faceless</a></li>
+                        <li><a href="/realm/DwarfFaction" research="Dwarf">Dwarf</a></li>
+                        <li><a href="/realm/DrowFaction" research="Drow">Drow</a></li>
+                        <li><a href="/realm/DragonFaction" research="Dragon">Dragons</a></li>
+                        <li><a href="/realm/MercenaryFaction" research="Mercenary">Mercenary</a></li>
+                        <li><a href="/realm/ArchonFaction" research="Archon">Archon</a></li>
+                        <li><a href="/realm/DjinnFaction" research="Djinn">Djinn</a></li>
+                        <li><a href="/realm/MakersFaction" research="Makers">Makers</a></li>
+                    </ul>
+                    <!--[if lte IE 6]>
+                    </td></tr></table>
+                    </a>
+                    <![endif]-->
+                </li>
+                <li><a href="/realm/Artifacts" research="A complete list of Artifacts and their requirements in image map form">Artifacts</a>
+                    <!--[if lte IE 6]>
+                    <a href="#">category 4
+                        <table>
+                            <tr>
+                                <td>
+                    <![endif]-->
+                    <ul>
+                        <li><a href="/realm/QuestArtifacts/" research="Quest Artifacts">Quest Artifacts</a></li>
+                        <li><a href="/realm/LoreArtifacts/" research="Lore Artifacts">Lore Artifacts</a></li>
+                    </ul>
+                    <!--[if lte IE 6]>
+                    </td></tr></table>
+                    </a>
+                    <![endif]-->
+                </li>
+                <li><a href="/realm/Research">Research</a>
+                    <!--[if lte IE 6]>
+                    <a href="#">EXPLORER
+                        <table>
+                            <tr>
+                                <td>
+                    <![endif]-->
+                    <ul>
+                        <li><a href="/realm/ResearchFacilities" research="Research Facilities">Research</a>
+                            <ul>
+                                <li><a href="/realm/Spellcraft" research="Spellcraft">Spellcraft</a></li>
+                                <li><a href="/realm/Craftsmanship" research="Craftsmanship">Craftsmanship</a></li>
+                                <li><a href="/realm/Divine" research="Divine">Divine</a></li>
+                                <li><a href="/realm/Economics" research="Economics">Economics</a></li>
+                                <li><a href="/realm/Alchemy" research="Alchemy">Alchemy</a></li>
+                                <li><a href="/realm/Warfare" research="Warfare">Warfare</a></li>
+                            </ul>
+                        <li><a href="/realm/Researchtree" research="Researchtree">Research Tree</a></li>
+                        <li><a href="/realm/UniqueBuilding" research="UniqueBuilding">Unique Buildings</a></li>
+                        <li><a href="/realm/ResearchUpgrades" research="Research Upgrades">Upgrades</a>
+                            <ul>
+                                <li><a href="/realm/ResearchAssistantUpgrades" research="Assistant Upgrades">Assistant</a></li>
+                                <li><a href="/realm/ResearchManaUpgrades" research="Mana Upgrades">Mana</a></li>
+                                <li><a href="/realm/ResearchSpellUpgrades" research="Spell Upgrades">Spell</a></li>
+                                <li><a href="/realm/ResearchFactionCoinUpgrades" research="Faction Coin Find Chance Upgrades">Faction Coin Find Chance</a></li>
+                                <li><a href="/realm/ResearchUniqueBuildingUpgrades/" research="Unique Building Upgrades">Unique Building</a>
+                                <li><a href="/realm/ResearchBuildingBasedOnUB/" research="Building Upgrades based on Unique Buildings">Building-UB</a>
+                                <li><a href="/realm/ResearchNonUniqueUpgrades/" research="Non-Unique Building Upgrades slots">Non-Unique Building</a>
+                                <li><a href="/realm/ResearchNeutralBuildingUpgrades/" research="Neutral Building Upgrades">Neutral Building</a>
+                                <li><a href="/realm/ResearchAllBuildingUpgrades/" research="All other Building Upgrades">All Building</a>
+                                <li><a href="/realm/ResearchClickRewardUpgrades/" research="Click Reward Upgrades">Click Reward</a>
+                                <li><a href="/realm/ResearchGemBonusUpgrades/" research="Gem Upgrades">Gem Upgrades</a>
+                            </ul>
+                    </ul>
+                    <!--[if lte IE 6]>
+                    </td></tr></table>
+                    </a>
+                    <![endif]-->
+                </li>
+                <li><a href="/realm/Notation">Notation</a>
+                    <!--[if lte IE 6]>
+                    </td></tr></table>
+                    </a>
+                    <![endif]-->
+                </li>
+                <li><a href="/realm/PremiumUpgrades/">Premium</a>
+                    <!--[if lte IE 6]>
+                    </td></tr></table>
+                    </a>
+                    <![endif]-->
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="parent">
+        <div id="leftcolumn">
+            <div id="leftbox">
+            </div>
+            <div id="navcontainer">
+                <ul id="navlist">
+                  <li id="active"><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHJwYJKoZIhvcNAQcEoIIHGDCCBxQCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYABBed3WDi1lVV5pb+JKKoYxXUQAMvwYA+htRxJfFiGAMlMqfmaPiuCsUi++mOPAcx0wTGPbNZFt5j3GzM1PtKo7Ag7X06KwgnuGTc2M6N9wRsWTSUjVsZ5tw0cWlxCWj1CC0bzp373SfqYtypUH5XsY5G+XS55/GoZzF98vDuvMTELMAkGBSsOAwIaBQAwgaQGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIcDGWTXI8JiWAgYBzhzJtHTz8vZAY7UXlviKEHTZcr2ZwfsZgLTdzWsRGDwCslcnt7a7X1OVJWCHY6B8En5HibuEly48lX7LTL/IVQJKo9Jy2Z+w7RYLRZRRmKnlO36w+NoYeEXcWBrTiwFMWTc2whdE8/edgCtJqdCBqqYzINIyoIom44F3wRV0NEKCCA4cwggODMIIC7KADAgECAgEAMA0GCSqGSIb3DQEBBQUAMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbTAeFw0wNDAyMTMxMDEzMTVaFw0zNTAyMTMxMDEzMTVaMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAwUdO3fxEzEtcnI7ZKZL412XvZPugoni7i7D7prCe0AtaHTc97CYgm7NsAtJyxNLixmhLV8pyIEaiHXWAh8fPKW+R017+EmXrr9EaquPmsVvTywAAE1PMNOKqo2kl4Gxiz9zZqIajOm1fZGWcGS0f5JQ2kBqNbvbg2/Za+GJ/qwUCAwEAAaOB7jCB6zAdBgNVHQ4EFgQUlp98u8ZvF71ZP1LXChvsENZklGswgbsGA1UdIwSBszCBsIAUlp98u8ZvF71ZP1LXChvsENZklGuhgZSkgZEwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tggEAMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADgYEAgV86VpqAWuXvX6Oro4qJ1tYVIT5DgWpE692Ag422H7yRIr/9j/iKG4Thia/Oflx4TdL+IFJBAyPK9v6zZNZtBgPBynXb048hsP16l2vi0k5Q2JKiPDsEfBhGI+HnxLXEaUWAcVfCsQFvd2A1sxRr67ip5y2wwBelUecP3AjJ+YcxggGaMIIBlgIBATCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwCQYFKw4DAhoFAKBdMBgGCSqGSIb3DQEJAzELBgkqhkiG9w0BBwEwHAYJKoZIhvcNAQkFMQ8XDTE4MDMyOTEwNDMzMlowIwYJKoZIhvcNAQkEMRYEFBjsXbW7ntttO6jWnQyxxbGxQxK7MA0GCSqGSIb3DQEBAQUABIGAiWv748Lds8X4GoPOpfiDzdc0Fue/FXeUKsMAVnAcNuBolecQvJuOCvFAAfGxKtYk9MlJHRhn+GWPrWStmE+i1ptRh9rgeTrZ/BeHR8wyOMq7dGhEkQpvj4pZP1Pf4AmA0nse87p8e77itIiZ/0tYb+yh4hcw9Ij2jo80j8VwJ/A=-----END PKCS7-----
+">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+                    <li id="active"><a href="/realm" id="current">Home</a></li>
+                    <li id="active"><a href="/realm/GuestBook/gbook.php" id="current">G00F's not a Guest Book</a></li>
+                    <li id="active"><a href="/realm/SiteMap/" id="current">Sitemap</a></li>
+                    <li id="active"><a href="/realm/RNG/" id="current">Random Number Generator</a></li>
+                    <li id="active"><a href="/realm/Changes/" id="current">Latest Major Patch</a></li>
+                    <li id="active"><a href="https://discord.gg/cq6zmQX" id="current">Official Realm Grinder Discord</a></li>
+                    <P align="center"><b>The Game</b>
+                      <li id="active"><a href="/realm/Terminology">Terminology HotKeys</a></li>
+                    <li id="active"><a href="/realm/GameWindow">Game Window</a></li>
+                    <li id="active"><a href="/realm/Reset">Abdication<br/>Reincarnation<br/>Ascension</a></li>
+                    <li id="active"><a href="/realm/TrophyPage" reserach="A complete list of Trophies">Trophy Page</a></li>
+                    <li id="active"><a href="/realm/TrophyGuide">Trophy Guide</a></li>
+                    <li id="active"><a target="_blank" href="https://steamcommunity.com/sharedfiles/filedetails/?id=1118498519">Beginners Guide </a></li>
+                    <li id="active"><a href="/realm/R16Guide">R16 Research Guide</a></li>
+                    <li id="active"><a href="/realm/UsefulTables">Useful Tables</a></li>
+                    <li id="active"><a target="_blank" research="R0 - R39 Guide" href="/realm/A0_Plot.png">A0 Plot</a></li>
+                    <li id="active"><a target="_blank" research="R40 - R99 Guide" href="/realm/A1_Plot.png">A1 Plot</a></li>
+                    <li id="active"><a href="/realm/Rubies">Rubies</a></li>
+                    <li id="active"><a href="/realm/Events">Events</a></li>
+                    <li id="active"><a href="/realm/BuildingAlignments">Building Alignments</a></li>
+                    <li id="active"><a href="/realm/Changelog">Changelog</a></li>
+                    <li id="active"><a href="/realm/PremiumUpgrades">Premium Upgrades</a></li>
+                    <li id="active"><a href="/realm/Notation">Notation</a></li>
+                    <li id="active"><a href="/realm/Kong">Kongregate Links</a></li>
+                    <li id="active"><a href="/realm/Tools">Realm Grinder Tools</a></li>
+                    <li id="active"><a href="/realm/BrowserIssues">Browser Issues</a></li>
+                    <li id="active"><a href="/realm/WallofShame">Wall of Shame</a></li>
+                    <P align="center">Upgrades
+                    <li id="active"><a href="/realm/Upgrades">Upgrades</a></li>
+                    <li id="active"><a href="/realm/BuildingUpgrades">Building Upgrades</a></li>
+                    <li id="active"><a href="/realm/Factions">Factions</a></li>
+                    <li id="active"><a href="/realm/FactionUpgrades">Faction Upgrades</a></li>
+                    <li id="active"><a href="/realm/Heritages">Heritages</a></li>
+                    <li id="active"><a href="/realm/Artifacts/">Artifacts</a></li>
+                    <li id="active"><a href="/realm/Challenges/">Challenges</a></li>
+                    <li id="active"><a href="/realm/Bloodline">Bloodlines</a></li>
+                    <li id="active"><a href="/realm/Research">Research</a></li>
+                    <li id="active"><a href="/realm/Researchtree">Research Tree</a></li>
+                    <li id="active"><a href="/realm/Lineages">Lineages</a></li>
+                    <li id="active"><a href="/realm/MercResearch">Mercenary Research</a></li>
+                    <li id="active"><a href="/realm/Ascension2">Ascension 2</a></li>
+                    <li id="active"><a href="/realm/ArtifactSet">Artifact Sets</a></li>
+                    <li id="active"><a href="/realm/Spells">Spells and Tier Upgrades</a></li>
+                    <li id="active"><a href="/realm/SunForce">Sun Force</a></li>
+                    <P align="center">Builds
+                    <li id="active"><a href="/realm/MercBuilds">Mercenary Builds</a></li>
+                    <li id="active"><a href="/realm/ResearchBuilds" research="R16-R29">Research Builds</a></li>
+                    <li id="active"><a href="/realm/PBuilds" research="R29-R39">Prestige Builds</a></li>
+                    <li id="active"><a href="/realm/R40-R46" research="Ascension 1">R40-R46 Builds</a></li>
+                    <li id="active"><a href="/realm/R47-R60" research="Dragons">R47-R59 Builds</a></li>
+                    <li id="active"><a href="/realm/R60-R75" research="Lineages">R60-R75 Builds</a></li>
+                    <li id="active"><a href="/realm/R75Plus" research="Mercenary Research">R75-R99 Builds</a></li>
+                    <!--<li id="active"><a href="/realm/R90Plus" research="Veteran Figurine">R90-99 Builds</a></li>-->
+                    <li id="active"><a href="/realm/R100Plus" research="Ascension 2">R100-R115 Builds</a></li>
+                    <li id="active"><a href="/realm/R116Plus" research="Prestige Ascension 2">R116-R125 Builds</a></li>
+                    <li id="active"><a href="/realm/R125Plus" research="Elite Factions">R125-R135 Builds</a></li>
+                    <li id="active"><a href="/realm/R135Plus" research="Elite Challenges">R135-R159 Builds</a></li>
+                    <li id="active"><a href="/realm/R160Plus" research="A3 Mercenaries">R160+ Builds</a></li>
+
+                    </ul>
+                    </div>
+                    </div>
+                    <div id="rightcolumn">
+                    <div class="rightbox">
+                  <div class="rightboxcontent">
+                        <a href="https://discord.gg/cq6zmQX" research="Click to join Realm Grinder Chat on Discord"><img src="http://musicfamily.org/realm/Factions/picks/RealmGrinderGameRL.png"></img></a>
+                    </div>
+                    </div>
+<h6><img src="http://musicfamily.org/realm/Factions/picks/ExcavationTopPage.png"></h6>
+<p><b>There are two kinds of artifacts</b></p>
+<p><a href="/realm/QuestArtifacts" research="Quest Artifacts"><b>Quest Artifacts</b></a> and
+<a href="/realm/LoreArtifacts" research="Lore Artifacts"><b>Lore Artifacts</b></a></p>
+<p>For Artifact Sets, go to <a href="/realm/ArtifactSet" research="Artifact Sets"><b>Artifact Sets</b></a></p>
+<p><b>In-game description</b>
+<p>Enter the Archeology Association to control the progress of your Excavations. There you will be able to fund more excavations to find Faction Coins, the rare Rubies and ancient Artifacts from the civilizations of the old.</p>
+<p>Archaeology was first implemented in the "Ancient Races" expansion for introducing the Neutral Factions.</p>
+<p>Excavating enables to find Rubies (See the <b><a target="_blank" href="http://musicfamily.org/realm/Rubies/">Ruby</a></b> page), with luck: Faction Coins, and at certain thresholds or under certain conditions: Artifacts. Specific artifacts are required to unlock the Neutral & Prestige Factions.</p>
+<p>Some artifacts will reward direct bonuses and the amount of discovered artifacts take part in some Research upgrades.</p>
+<p><b>Requirements</b>
+<p>Archaeology is unlocked once you have over 1B gems, produced over 10 Oc (1E28) coins and bought the</p>
+<p><b><img src="http://musicfamily.org/realm/Factions/picks/Archeology-upgrade.png" alt="Smiley face" align="middle"> Archeology Upgrade</b>.</p>
+<p><b>Cost</b>: 100 Oc (1e29)</p>
+<p>An "Excavation" button will then appear on the top left of the Upgrades tab and you may commence excavations.</p>
+<p>The chance to find <b>Lore Artifacts</b> requires the</p>
+<p><img src="http://musicfamily.org/realm/Factions/picks/SurveyEquipment.png" alt="Smiley face" align="middle"><b> Survey Equipment Upgrade</b>
+<p><b>Requirements</b>: which requires 100 excavations and <b>
+<p><b>Cost</b>: 1e35 (100 Dc)</b>. To be bought once throughout the entire game and does not show up as bought upgrade.
+<p><b>Cost & Faction Coins</b></p>
+<p><b>Excavation</b>: The first excavation costs 1 Oc (1E27) coins, and each subsequent excavation costs 20% more than the last.</p>
+<p><b>Formula</b>: 1e27 ^ (0.75 ^ A) * (1 + (0.2 - 0.025 (if E290) - 0.025 (if Ancient Egg)) / 5A) ^ x where A is number of ascensions and x is number of excavations.
+<p><b>Faction Coins</b>: 35% (40% with That Excavated Quickly upgrade) per excavation</p>
+<p><b>Formula</b>: 1500 + 0.05 * x ^ 2.75, where x is the number of excavations you have (not including the one just purchased).</p>
+<p><b>Excavation Reset</b></p>
+<p><b>Cost</b>: floor(x / 3000) + 1 rubies where x is number of excavations.
+<p><b>Note</b>: Free reset if enough times excavated this R (R40+ to afford reset amount)
+<p><b>Formula</b>: 2000 + 50 * R + 500 * x where x is amount of resets this R.
+<p><b>Note</b>: It will reset the excavation counter to zero, all previously gained Excavation rewards and Rubies will persist and you can not find them again.</p>
+
+<p><img src="http://musicfamily.org/realm/Factions/picks/QuestArtifacts3.6.png" usemap="#QuestArtifacts-map">
+<map name="QuestArtifacts-map">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/AncientStoneSlab1.png alt=Artifacts align=middle><b> Ancient Stone Slab 1</b></p> <p><b>Clues</b>: We discovered an ancient stone slab written in old scriptures. It appears to say something about Halls of Legends.</p><p><b>Effect</b>: 1st clue required to unlock the Titan Alliance.</p> <p><b>Requirements</b>: 5th Excavation" coords="5,45,61,100" shape="rect">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/FossilizedPieceofBark1.png alt=Artifacts align=middle><b> Fossilized Piece of Bark 1</b></p> <p><b>Clues</b>: We discovered a fossilized piece of Bark with the image of a Faction Coin carved into it.</p><p><b>Effect</b>: 1st clue required to unlock the Druid Alliance.</p> <p><b>Requirements</b>: 10th Excavation" coords="69,45,126,101" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/BoneFragment1.png alt=Artifacts align=middle><b> Bone Fragment 1</b></p> <p><b>Clues</b>: We discovered a sundial shaped artefact, probably made of animal bones.</p><p><b>Effect</b>: 1st clue required to unlock the Faceless Alliance.</p> <p><b>Requirements</b>: 15th Excavation" coords="133,44,191,101" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/AncientStoneSlab2.png alt=Artifacts align=middle><b> Ancient Stone Slab 2</b></p> <p><b>Clues</b>: We discovered an ancient stone slab written in old scriptures.We can recognize the number 300.</p><p><b>Effect</b>: 2nd clue required to unlock the Titan Alliance.</p> <p><b>Requirements</b>: 20th Excavation" coords="197,45,253,101" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/FossilizedPieceofBark2.png alt=Artifacts align=middle><b> Fossilized Piece of Bark 2</b></p> <p><b>Clues</b>: We discovered a fossilized piece of Bark with the symbol of One Million.</p><p><b>Effect</b>: 2nd clue required to unlock the Druid Alliance.</p> <p><b>Requirements</b>: 25th Excavation" coords="261,43,318,100" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/BoneFragment2.png alt=Artifacts align=middle><b> Bone Fragment 2</b></p> <p><b>Clues</b>: We discovered an artefact shaped like the number 36, probably made of animal bones.</p><p><b>Effect</b>: 2nd clue required to unlock the Faceless Alliance.</p> <p><b>Requirements</b>: 30th Excavation" coords="325,44,382,101" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/KeytotheLostCity.png alt=Artifacts align=middle><b> Key to the Lost City</b></p> <p><b>Clues</b>: Despite being thousands of years old, it's still shiny.</p><p><b>Effect</b>: Neutral Research</p> <p><b>Requirements</b>: 1500th Excavation (total), R23+" coords="389,44,446,101" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/AncientDevice.png alt=Artifacts align=middle><b> Ancient Device</b></p> <p><b>Clues</b>: This strange Device seems to react to the Ancient Races magical capabilities. We may channel its power to increase their research potential!</p><p><b>Effect</b>: Provides 2 additional slots: 1 for each related Neutral Faction Facility you are playing.</p> <p><b>Requirements</b>: Play a Neutral Faction and have over 2,000 excavations, Unique Building. <p><b>Chance</b>: 0.2%<p><b>Cost</b>: 100 QiSxg (1E200) <p><b>Alignment</b>: Neutral<p><b>Note</b>: Has no effect R100+/A2" coords="6,109,62,165" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/EarthCore.png alt=Earth Core align=middle><b> Earth Core</b></p> <p><b>Clues</b>: This piece of rock is continuously shifting its shape, responding to mysterious energy sources.</p><p><b>Effect</b>: Part of the Prestige research quest</p> <p><b>Requirements</b>: 2750th Excavation, R29+" coords="70,109,127,165" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/HornoftheKings.png alt=Horn of the Kings align=middle><b> Horn of the Kings</b></p> <p><b>Clues</b>: It is said that when this horn is blown, the voices of past Dwarven Kings can be heard in the Wind.</p><p><b>Effect</b>: Unlocks Legacy of the Kings upgrade that adds 3 extra slots: 2 for Craftsmanship and 1 to the faction's facility you are playing</p> <p><b>Requirements</b>: have Dwarven Forges, 3250+ Excavations (as Dwarf) Chance: 0.5%</p> <p><b>Cost</b>: 10 SxSpg (1E232) and 10m Dwarven Coins <p><b>Alignment</b>: Dwarf" coords="132,107,190,166" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/FlameofBondelnar.png alt=Flame of Bondelnar align=middle><b> Flame of Bondelnar</b></p> <p><b>Clues</b>: </p><p><b>Effect</b>: Unlocks the upgrade The Dark Light of Bondelnar that adds 3 extra slots: 2 for Warfare and 1 to the faction's facility you are playing</p> <p><b>Requirements</b>: Have Spider Sanctuaries (as Drow) Excavations: 3250+ Chance: 0.5%</p> <p><b>Cost</b>: 10 SxSpg (1E232), 10m Drow Coins <p><b>Alignment</b>: Drow" coords="197,108,253,166" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/SpikyRoughEggArtifact.png alt=Flame of Bondelnar align=middle><b> Spiky Rough Egg</b></p> <p><b>Clues</b>: What a weird egg... it looks ages old, yet something alive is inside. Perhaps if you wait long enough, something will hatch?</p><p><b>Effect</b>: Unlocks the Hatch! Egg</p> <p><b>Requirements</b>: R46+, 1500 Excavations (Chance: 2%)" coords="261,109,318,165" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/ObsidianShardArtifact.png alt=Obsidian Shard align=middle><b> Obsidian Shard</b><p><b>Description</b>: Extremely hard and black as darkness itself, this material cannot apparently be carved or melted. It is a mystery how you can make this thing into a sword.<p><b>Effect</b>: Unlocks Secrets of the Warriors <p>Requirement: 8000 Excavations any Faction, R75+" coords="324,108,382,165" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/FirstIronFragment.png align=middle> First Iron Fragment<p>Clue: This one seems to require a lot of magical renewance.<p>Description: It looks like a piece of an iron object. It's broken off on two sides.<p>Requirements: R125, 12,500+ Excavations, Play as Angel<p>Chance: (log10(1 + x) ^ 3 / 100000 (100K))%, where x is mana regen." coords="388,109,446,165" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/SecondIronFragment.png align=middle> Second Iron Fragment<p>Clue: Found via extensive Royal Trading mandates.<p>Description: It looks like a piece of an iron object. It's broken off on two sides.<p>Requirements: R125, 12,500+ Excavations, Play as Titan<p>Chance: (x ^ 3 / 5000000000 (5B))%, where x is individual royal exchange bonus." coords="5,172,62,229" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/ThirdIronFragment.png align=middle> Third Iron Fragment<p>Clue: Chances to find increase while not actively searching.<p>Description: It looks like a piece of an iron object. It's broken off on two sides.<p>Requirements: R125, 12,500+ Excavations, Play as Undead<p>Chance: ((log10(1 + x) - 2) ^ 3 / 1000000 (1M))%, where x is offline bonus precentage." coords="69,172,125,229" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/FirstCrystalFragment.png align=middle> First Crystal Fragment<p>Clue: Assistants will lead the way.<p>Description: A strange, glass-like material that appears to have been shattered into three pieces. <p>Requirements: R125, 12,500+ Excavations, Play as Fairy<p>Chance: (x / 100000000000 (100B))%, where x is assistant count." coords="133,173,190,228" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/SecondCrystalFragment.png align=middle> Second Crystal Fragment<p>Clue: Are Faction Coins attracted to glass?<p>Description: A strange, glass-like material that appears to have been shattered into three pieces.<p>Requirements: R125, 12,500+ Excavations, Play as Faceless<p>Chance: (log10(1 + x) ^ 3 / 2500000 (2.5M))%, where x is faction coins this game." coords="197,172,254,229" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/ThirdCrystalFragment.png align=middle> Third Crystal Fragment<p>Clue: Also acts as a spell catalyst.<p>Description: A strange, glass-like material that appears to have been shattered into three pieces.<p>Requirements: R125, 12,500+ Excavations, Play as Demon<p>Chance: (x / 50000000 (50M))%, where x is evil spells this R." coords="261,173,317,228" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/FirstStoneFragment.png align=middle> First Stone Fragment<p>Clue: Click to Carve.<p>Description: Made from stone so ancient it is unknown to the current world. Two parts seem to be missing.<p>Requirements: R125, 12,500+ Excavations, Play as Elf<p>Chance: (log10(1 + x) ^ 3) / 20000 (20K))%, where x is clicks this game" coords="325,172,383,229" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/SecondStoneFragment.png align=middle> Second Stone Fragment<p>Clue: Stone to stone, buildings to buildings.<p>Description: Made from stone so ancient it is unknown to the current world. Two parts seem to be missing.<p>Requirements: R125, 12,500+ Excavations, Play as Druid<p>Chance: (x / 20000000 (20M))%, where x is amount of buildings." coords="388,172,446,229" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/ThirdStoneFragment.png align=middle> Third Stone Fragment<p>Clue: Might be collected with taxes.<p>Description: Made from stone so ancient it is unknown to the current world. Two parts seem to be missing.<p>Requirements: R125, 12,500+ Excavations, Play as Goblin<p>Chance: (log10(1 + x) ^ 3) / 125000 (125K))%, where x is Tax Collections this game." coords="5,236,62,293" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/ObsidianCrown.png align=middle> Obsidian Crown</p><p><b>Requirements</b>: R170+, Play as Mercenary, 10 excavation resets (This game)</p><p><b>Chance</b>: ((x - 10) / 1000)%, x is the number of free and ruby excavation resets (This game)</p><p><b>Effect</b>: Unlocks Mercenary Union Contract</p>" coords="68,236,124,292" shape="rect">
+</map>
+<p><img src="http://musicfamily.org/realm/Factions/picks/LoreArtifacts3.6.png" usemap="#LoreArtifacts-map">
+<map name="LoreArtifacts-map">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/RoughStone.png alt=Artifact align=middle><b> Rough Stone</b></p><p>Clue: A first-time only discovery.<p><b>Description</b>: A common, totally uninteresting stone.</p><p><b>Effect</b>: Unlocks Research D290</p> <p><b>Requirement</b>: Chance: 2% On the first excavation of a run, after abdication or reincarnation." coords="5,44,61,101" shape="rect">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/ScarabofFortune.png alt=Scarab of Fortune align=middle><b> Scarab of Fortune</b></p><p>Clue: Rarely found in the pyramids of old.<p><b>Description</b>: You found the rarest of relics. This golden scarab will grant you 7 days of good luck, starting from now. Make good use of it.</p> <p><b>Rewards</b>:  Awards an upgrade of the same name that increases the production of all buildings by 0.1% for each trophy you unlocked.</p> <p><b>Chance</b>: (#Ancient Pyramids)% / 1000.</p> <p><b>Cost</b>: 7 Td (7E42) <p><b>Alignment</b>: Any" coords="68,44,125,100" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/ChocolateCookie.png alt=Chocolate Cookie align=middle><b> Chocolate Cookie</b></p><p>Clue: Excavated commonly in all areas.<p><b>Description</b>: Found in a wasteland made of cakes and sweets, snatched from the hands of an old woman.</p> <p><b>Chance</b>: (# excavations / 50)%" coords="131,44,188,100" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/FossilizedRodent.png alt=Fossilized Rodent align=middle><b> Fossilized Rodent</b></p><p>Clue: Hello, mouse.<p><b>Description</b>: What's this, a prehistoric mouse...?</p> <p><b>Rewards</b>: Awards an upgrade of the same name, Increase clicking reward based on the amount of artifacts you discovered.<p>Formula: (10 * x), where x is number of artifacts you discovered.</p> <p><b>Chance</b>: (# Treasure clicks this R / 5,000,000)%</p> <p><b>Cost</b>: 100 Qid (1E50) <p><b>Alignment</b>: Any" coords="196,45,253,100" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/PowerOrb.png alt=Power Orb align=middle><b> Power Orb</b></p><p>Clue: Attracted by massive concentration of mana.<p><b>Description</b>: Throbbing with Arcane Power</p> <p><b>Rewards</b>: Increases mana regeneration by 2.5%.</p> <p><b>Requirement</b>: +3000 max mana</p> <p><b>Chance</b>: (max mana / 15,000) %</p> <p><b>Cost</b>: 1 QaVg (1E75), A1+: Free</p> <p><b>Alignment</b>: Any" coords="260,45,317,100" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/PinkCarrot.png alt=Smiley face align=middle><b> Pink Carrot</b></p><p>Clue: Found randomly in the Farms.<p><b>Description</b>: The main product of properly nurtured Farms.</p> <p><b>Requirement</b>: Play as Fairy (Not Dwarf)</p> <p><b>Chance</b>: (# Farms / 5,000)%" coords="324,45,382,100" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/BottledVoice.png alt=Smiley face align=middle><b> Bottled Voice</b></p><p>Clue: Can be captured when Chanting.<p><b>Description</b>: The essence of a melodic Fairy voice.</p> <p><b>Requirement</b>: Play as Fairy (Not Dwarf)</p> <p><b>Chance</b>: (Fairy Chanting casts this game / 40,000)%" coords="388,45,443,100" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/LuckyClover.png alt=Smiley face align=middle><b> Lucky Clover</b></p><p>Clue: Requires extreme amounts of luck!<p><b>Description</b>: A perfectly shaped four leaf clover. Each leaf is almost unnaturally identical to the other three.</p> <p><b>Requirement</b>: Play as Elven (Not Dwarf)</p> <p><b>Chance</b>: (Highest # of consecutive Elven Luck-1) * 50)%" coords="5,107,61,165" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/Mini-treasure.png alt=Smiley face align=middle><b> Mini-treasure</b></p><p>Clue: Click your way to the treasure!<p><b>Description</b>: It's a small perfect replica of our gold-filled treasure.</p> <p><b>Requirement</b>: Play as Elven (Not Dwarf)</p> <p><b>Chance</b>: (# Clicks this game / 3,000,000)%" coords="68,108,124,165" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/Pillarfragment.png alt=Smiley face align=middle><b> Pillar Fragment</b></p><p>Clue: May fall from the Heavens.<p><b>Description</b>: A tiny piece of the legendary pillars which sustain all the Heavens.</p> <p><b>Requirement</b>: Play as Angel (Not Dwarf)</p> <p><b>Chance</b>: (# Heaven's Gate / 3,750)%" coords="132,108,189,165" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/DivineSword.png alt=Smiley face align=middle><b> Divine Sword</b></p><p>Clue: Only found by dedicated Angel allies.<p><b>Description</b>: The shining golden sword of an Archangel. Its hilt feels pleasantly warm to the pure of heart and burning hot for the villain.</p> <p><b>Requirement</b>: Play as Angel (Not Dwarf)+3 consecutive Angels runs (This R). Even just buying the Angels Trade Treaty counts towards this artifact.</p> <p><b>Chance</b>: (Consecutive times allied with Angels this R / 60)%" coords="196,108,253,164" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/AncientCoinPiece.png alt=Artifacts align=middle><b> Ancient Coin Piece</b></p><p>Clue: Rarely found among other special coins.<p><b>Description</b>: A common goblin lucky charm. The older it is, the luckier you are, or so they say.</p> <p><b>Requirement</b>: Play as Goblin (Not Drow)</p> <p><b>Chance</b>: (#Faction Coins this R# / 50,000,000)%" coords="260,108,316,165" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/GoblinPurse.png alt=Artifacts align=middle><b> Goblin Purse</b></p><p>Clue: Fill your pockets with extorted money.<p><b>Description</b>: Heavy and roomy. Definitely too big for just pocket change.</p> <p><b>Requirement</b>: Play as Goblin (Not Drow)</p> <p><b>Chance</b>: (Tax collection casts this game / 300,000)%" coords="323,107,380,165" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/RottenOrgan.png alt=Artifacts align=middle><b> Rotten Organ</b></p><p>Clue: Found among large masses of dead bodies.<p><b>Description</b>: Ew... disgusting. It still pulses.</p> <p><b>Requirement</b>: Play as Undead (Not Drow)</p> <p><b>Chance</b>: (# Assistants / 500)%" coords="387,107,444,165" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/JawBone.png alt=Artifacts align=middle><b> Jaw Bone</b></p><p>Clue: Needs some time off.<p><b>Description</b>: A jaw, missing more than half of its teeth.</p> <p><b>Requirement</b>: Play as Undead (Not Drow) +24h offline (This R)</p> <p><b>Chance</b>: (Offline playtime this R / 10d)%" coords="5,171,61,229" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/DemonicFigurine.png alt=Artifacts align=middle><b> Demonic Figurine</b></p><p>Clue: Look for the trophies of the beast.<p><b>Description</b>: An intricate figurine representing the evil face of a lesser demon.</p> <p><b>Requirement</b>: Play as Demon (Not Drow) 666 Trophies unlocked.</p> <p><b>Chance</b>: 1%" coords="67,173,124,229" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/DemonHorn.png alt=Artifacts align=middle><b> Demon Horn</b></p><p>Clue: Only found by dedicated Demon allies.<p><b>Description</b>: Still blazing with the flames of Hell. Handle with care.</p> <p><b>Requirement</b>: Play as Demon (Not Drow) +3 consecutive Demon runs (This R). Even just buying the Demons Trade Treaty counts towards this artifact.</p> <p><b>Chance</b>: (Consecutive times allied with Demon this R / 60)%" coords="132,172,189,228" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/HugeTitanStatue.png alt=Artifacts align=middle><b> Huge Titan Statue</b></p><p>Clue: Struck by the lightning.<p><b>Description</b>: The granite representation of a giant wielding a lightning bolt in its fist. A foot appears to be missing.</p> <p><b>Requirement</b>: Play as Titan (Not Dragon)</p> <p><b>Chance</b>: (Lightning Strike Casts this game / 1000)%" coords="196,170,253,228" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/TitanShield.png alt=Artifacts align=middle><b> Titan Shield</b></p><p>Clue: Don't fret it.<p><b>Description</b>: A gargantuan metal shield, twice as tall as a common human.</p> <p><b>Requirement</b>: Play as Titan (Not Dragon) +10h playtime (This game)</p> <p><b>Chance</b>: (Playtime this game / 50h)%" coords="259,173,317,228" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/GlyphTable.png alt=Artifacts align=middle><b> Glyph Table</b></p><p>Clue: Balance your buildings.<p><b>Description</b>: Contains all the secrets of the Druidic Alphabet.</p> <p><b>Requirement</b>: Play as Druid (Not Dragon) +Same amount of each Neutral building.</p> <p><b>Chance</b>: 2%" coords="324,172,380,228" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/StoneOfBalance.png alt=Artifacts align=middle><b> Stone of Balance</b></p><p>Clue: A Grand Balance performance.<p><b>Description</b>: A carved stone hovering above its pedestal.</p> <p><b>Requirement</b>: Play as Druid (Not Dragon)</p> <p><b>Chance</b>: (Grand Balance Casts this game / 30,000)%" coords="387,172,445,230" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/TranslucentGoo.png alt=Artifacts align=middle><b> Translucent Goo</b></p><p>Clue: Byproduct of the Brain.<p><b>Description</b>: A completely odorless sticky substance with a diaphanous, unsettling glow.</p> <p><b>Requirement</b>: Play as Faceless (Not Dragon)</p> <p><b>Chance</b>: (Brainwave casts this game / 400)%" coords="5,235,62,294" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/Octopus-shapedHelmet.png alt=Artifacts align=middle><b> Octopus-shaped Helmet</b></p><p>Clue: Found in the Labyrinths.<p><b>Description</b>: A large helmet with empty metal prongs to accomodate tentacular appendages.</p> <p><b>Requirement</b>: Play as Faceless (Not Dragon)</p> <p><b>Chance</b>: (# Labyrinths / 2000)%" coords="68,236,124,292" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/DwarvenBow.png alt=Artifacts align=middle><b> Dwarven Bow</b></p><p>Clue: Click to throw.<p><b>Description</b>: Actually a heavy throwing hammer.</p> <p><b>Requirement</b>: Play as Dwarves</p> <p><b>Chance</b>: (# clicks this game / 25,000)%" coords="132,235,188,292" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/StoneTankard.png alt=Artifacts align=middle><b> Stone Tankard</b></p><p>Clue: Found in the Inns.<p><b>Description</b>: A very heavy mug for drinking the heaviest beers.</p> <p><b>Requirement</b>: Play as Dwarves</p> <p><b>Chance</b>: (# Inns / 25,000)%" coords="196,235,252,292" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/CeremonialDagger.png alt=Artifacts align=middle><b> Ceremonial Dagger</b></p><p>Clue: Avoid hurting your fingers.<p><b>Description</b>: Its blade is unnaturally keen and sharp.</p> <p><b>Requirement</b>: Play as Drow, 0 Treasure clicks (This Game) (This includes automatic clicks)</p> <p><b>Chance</b>: 2%" coords="259,236,317,292" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/ArachnidFigurine.png alt=Arachnid Figurine align=middle><b> Arachnid Figurine</b></p><p>Clue: Embrace Evil. For a while.<p><b>Description</b>: If you are afraid of spiders, Drow aren't your faction.</p> <p><b>Requirement</b>: Play as Drow +24h Evil Playtime (All-time)</p> <p><b>Chance</b>: (All-time Evil playtime / 50d)%" coords="324,235,381,292" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/SteelPlate.png alt=Steel Plate align=middle><b> Steel Plate</b></p><p>Clue: Legacy from 50 generations ago.<p><b>Description</b>: A full plate made of hardened steel.</p> <p><b>Requirement</b>: Play as Mercenaries +R5</p> <p><b>Chance</b>: (#R / 50)%" coords="387,236,445,292" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/BlackSword.png alt=Black Sword align=middle><b> Black Sword</b></p><p>Clue: Only found by really, really dedicated Mercenary allies.<p><b>Description</b>: A long sword with an extremely sharp blade made of dark metal.</p> <p><b>Requirement</b>: Play as Mercenaries +100 Merc affiliations (All-time)</p> <p><b>Chance</b>: (All-time Mercenary playtime / 16h 40m)%" coords="3,298,62,356" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/DragonFangArtifact.png alt=Dragon Fang align=middle><b> Dragon Fang</b></p><p>Clue: Found in the Wyrm Dens.<p><b>Description</b>: This huge fang can barely fit in the hands of a Titan.</p> <p><b>Requirement</b>: R50+, play as Dragons <p><b>Chance</b>: (# Iron Strongholds / 400,000)%</p> <p><b>Alignment</b>: Neutral faction, Dragons" coords="68,299,125,356" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/DragonSoulArtifact.png alt=Dragon Soul align=middle><b> Dragon Soul</b></p><p>Clue: Take five deep breaths.<p><b>Description</b>: The extracted soul from an ancient dragon, wields the power to end the world in an instant. Also makes a good soup ingredient.</p> <p><b>Requirement</b>: R50+, play as Dragons, have 5 different Dragon Breath effects active simultaneously.</p> <p><b>Chance</b>: Excavate (# Dragon Breath casts this game / 200,000)% <p><b>Alignment</b>: Neutral faction, Dragons" coords="132,300,188,356" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/VanillaFlavorJuice.png alt=Smiley face align=middle><b> Vanilla Flavor Juice</b></p><p>Clue: Quickly!<p><b>Description</b>: An essence from extremely savory vanilla beans.</p> <p><b>Rewards</b>: Increase the production of all buildings by 2,500% for the first 25 minutes of the game (this game) for all Vanilla factions. Doesn't work while offline.</p> <p><b>Note</b>: Effect is canceled if you Prestige.</p> <p><b>Requirement</b>: +R16</p> <p><b>Chance</b>: 20% in the first 5m of a game</p> <p><b>Cost</b>: 1 coin <p><b>Alignment</b>: Vanilla faction" coords="196,300,253,357" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/AncientCocoaBeanArtifacts.png align=middle><b> Ancient Cocoa Bean</b><p>Clue: True Neutral Flavor.<p>Description: Despite being centuries old, it still smells like top-quality cocoa.<p>Requirement: Neutral, R22+, Must be Neutral Faction to buy upgrade<p>Effect: Gives an upgrade named Chocolate Flavored Smoothie<P>Upgrade Effect: Increase the production of all buildings by 2500% for the first 15 minutes of the game for all Neutral factions.<P>Upgrade Effect: A2, Increase the production of all buildings by 5.68% for the first 15 minutes of the game for all Neutral factions. Does not work while offline.<p>Chance: 10%" coords="259,299,317,356" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/KnowYourEnemyPartI.png align=middle><b> Know Your Enemy, Part I</b></p><p>Clue: A true Mercenary should learn by all other cultures.<p><b>Description</b>: All the knowledge you need, stored in a handy book.</p> <p><b>Rewards</b>: Awards an upgrade of the same name that increases the production of all buildings based on time spent as Non-Mercenary. ('Time allied with...' in the stats) <p><b>Formula</b>: (0.75 * x ^ 0.6)%, where x is amount of time spent as non-mercenary factions (in seconds). <p><b>Requirement</b>: Play as Mercenaries, have upgrades from each 11 factions. +R12</p> <p><b>Chance</b>: 10%</p> <p><b>Cost</b>: 100 Vg (1E65) <p><b>Alignment</b>: Mercenary" coords="324,300,381,356" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/VoodooDoll.png align=middle><b> Voodoo Doll</b></p><p>Clue: Found in the Witch Conclaves.<p><b>Description</b>: You are now CURSED! And you feel a sting in your lower rear.</p> <p><b>Rewards</b>: Increase the production of all building by 0.1% for each trophy you have unlocked</p> <p><b>Requirement</b>: Play as Evil (Only required to get Witch Conclaves)</p> <p><b>Cost</b>: 20 Qig (2E154) <p><b>Chance</b>: (number of Witch Conclaves / 10000)%</p> <p><b>Alignment</b>: Any" coords="387,298,445,358" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/WallFragment.png align=middle><b> Wall Fragment</b></p><p>Clue: Ascension...<p><b>Description</b>: A fragment of an utterly and completely unbreakable wall. Enjoy your paradox.</p> <p><b>Rewards</b>: Increase the production of all buildings based on their tier.</p> <p><b>Formula</b>: (2.5*x^2), where x is the building tier, starting at 1 for Halls of Legends and increasing to 11 for Farms. <p><b>Requirement</b>: At least 1 Ascension <p><b>Chance</b>: 10%</p> <p><b>Cost</b>: 1 M (1E6) <p><b>Alignment</b>: Any" coords="4,363,60,421" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/FortuntTellerMachineArtifact.png align=middle><b> Fortune Teller Machine</b></p><p>Clue: Dont choose your allies until you know more.<p><b>Requirement</b>: No Faction<p>Chance 0.1%</p><b>Description</b>: Will tell you 1 of 24 statements at random.<p>Upgrade Requirement: R42+<p>Cost: 1 No (1e32), A2 Free<p>Effect: Increase the production of Non-Unique buildings based on total time spent. (Time in seconds this R)<p>Formula: 6.5 * x ^ 0.65, where x is time this R" coords="67,364,127,421" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/DawnstoneArtifact.png align=middle><b> Dawnstone</b></p><p>Clue: Relic of the Dawn hours.<p><b>Description</b>: Only found during sunrise hours. Emits a faint glow.</p> <p><b>Rewards</b>: With Both the Duskstone and Dawnstone artifacts, awards the Sun Force upgrade, which grants different effects based on time of the day.</p> <p><b>Requirement</b>: Excavate between 5:00am and 8:00am (Your local time)<p><b>Chance</b>: (Excavation count / 10,000)%</p><p>Click image for details" href="http://musicfamily.org/realm/SunForce/" coords="132,363,190,422" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/DuskstoneArtifact.png align=middle><b> Duskstone</b></p><p>Clue: Relic of the Dusk hours.<p><b>Description</b>: Only found during sunset hours. Absorbs light in a small radius.</p> <p><b>Rewards</b>: With Both the Dawnstone and Duskstone artifacts, awards the Sun Force upgrade, which grants different effects based on time of the day.</p> <p><b>Requirement</b>: Excavate between 6:00pm and 9:00pm (Your local time)<p><b>Chance</b>: (Excavation count / 10,000)%</p><p>Click image for details" href="http://musicfamily.org/realm/SunForce/" coords="196,364,253,421" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/AncientHeirloomTrophy.png align=middle><b> Ancient Heirloom</b></p><p>Clue: Relic of the Lineage.<p><b>Requirements</b>: Have at least 1 Lineage level purchased. <p><b>Chance</b>: (Total Lineage levels/20)% <p><b>Effect</b>: Reduces the cost multiplier of Lineage by 10%, (Except for the highest one) (Instead of 10x more per level it is  9x more per level) <p><b>Formula</b>: Without Ancient Heirloom 25 * 10 ^ (8 + lineage level)<p>Formula: With Ancient Heirloom (25 * 10^ (8 + lineage level)) ^ 0.9<p><b>Cost</b>: 10 Dtg (1e100)" coords="260,362,317,421" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/KnowYourEnemyPart2.png align=middle><b> Know Your Enemy, Part 2</b></p><p>Clue: Even an expert Mercenary should learn by all other cultures.<p><b>Description</b>: Much more knowledge than you need, stored in a handy book.<p><b>Requirement</b>: R75+, Mercenary Unique Building, Upgrade from all 12 Factions</p><p><b>Reward</b>: Awards an upgrade of the same name that Increase the production of all buildings based on time spent as Non-Mercenaries.<p><b>Note</b>: Only available to Mercenaries<p><b>Formula</b>: 0.065 * x^0.65 where x is amount of time spent as non-mercenary factions (in seconds).<p>Chance: 5%<p><b>Secret Upgrade Cost</b>: 100 Noqag (1e152)" coords="325,364,381,421" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/VeteranFigurineArtifact.png align=middle><b> Veteran Figurine</b></p><p>Clue: A reward for the veteran challenger.<p><b>Description</b>: The warrior of a thousand battles, ultimate champion of the Realms.<p><b>Requirement</b>: R90+, Dragon Challenge 6<p>Chance: (x/1,000,000)%, where x is seconds this game.<p><b>Effect</b>: Passive effect: allows Mercenaries to benefit from all faction challenges of your alignment.<p><b>Note</b>: Does not grant elite challenges.</p>" coords="387,363,446,422" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/WallChunckArtifact.png align=middle><b> Wall Chunk</b></p><p>Clue: More Ascension...<p><b>Description</b>: A bigger piece of the infamous Ascension Wall.<p><b>Requirement</b>: R100+ <p><b>Chance</b>: 10%</p> <p><b>Effect</b>: Increase the production of all buildings based on their tier<p><b>Cost</b>: 1 Sx (1e21)<p><b>Formula</b>: 30000 * (11-x) ^ 3.5, where x is building tier." coords="4,426,60,485" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/ExcavatedMirageArtifact.png align=middle><b> Excavated Mirage</b></p><p>Clue: Raise your chances.<p><b>Description</b>: You know all too well this does not exist, yet it fills you with hope and optimism.<p><b>Requirement </b>: Ascension 2<p><b>Effect</b>: Increase Faction Coin find chance by a multiplicative 200%.<p><b>Cost</b>: 1 Sx (1e21)<p>Chance: (log10(x) / 100)%, where x is FC chance" coords="67,427,126,486" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/AncestralHourglassArtifact.png align=middle><b> Ancestral Hourglass</b></p><p>Clue: Really, raise your chances.<p>Description: The silver sands contained within seem to never stop flowing.<p>Requirement:  R100+<p>Upgrade Cost: (1e90)<p>Effect: Lower Lineage cost exponent based on Reincarnations made.<p>Note: FC cost is reset when you purchase a new lineage level.<p>Formula: (0.01 * R), R is Reincarnations made (NOT affected by invisible bonuses to R count).<p>Chance: (x / 5000000000000000 (5 QA))%, where x is FC chance." coords="132,428,189,486" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/SilkClothArtifact.png align=middle><b> Silk Cloth</b></p><p>Clue: Found in the Swarming Towers.<p>Description: The purest silk made for Fairies, by Fairies, of Fairies.<p>Requirement:  R100+, 2000+ Excavations, Play as Fairy<p>Chance: ((x - 10000) / 200000)%, where x is Wizard Towers built (Building count multipliers do NOT count)." coords="196,428,252,486" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/RawEmeraldArtifact.png align=middle><b> Raw Emerald</b></p><p>Clue: Not found on the first Excavation round.<p>Description: Just slightly less precious than a raw Ruby.<p>Requirement:  R100+, 2000+ Excavations, Play as Elven<p>Chance: (((3 * x) ^ 4.5) / 10000)%, where x is free and ruby excavation resets (this game)." coords="260,429,317,486" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/FossilizedWingArtifact.png align=middle><b> Fossilized Wing</b></p><p>Clue: Angels may fall after a long time.<p>Description: The remains of an Angel fallen to earth.<p>Requirement:  R100+, 2000+ Excavations, Play as Angel<p>Chance: (x / 25920000 (300 days))%, where x is angel time (all time) in seconds." coords="324,428,382,485" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/SpikedWhipArtifact.png align=middle><b> Spiked Whip</b></p><p>Clue: Used by the overseers in the Slave Markets.<p>Description: Use with caution. You do not want to exterminate all your slaves.<p>Requirement:  R100+, 2000+ Excavations, Play as Goblin<p>Chance: ((x - 10000) / 300000)%, where x is Slave Pens (Building count multipliers do NOT count)." coords="387,428,445,485" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/DustyCoffinArtifact.png align=middle><b> Dusty Coffin</b></p><p>Clue: Quick! Quick! You have no time to waste!<p>Description: Sealed since forever, yet you can hear a strange noise from within.<p>Requirement:  R100+, 2000+ Excavations, Play as Undead<p>Chance: (1 / (30 + x ^ 1.5))%, where x is time this game in seconds." coords="4,492,60,550" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/CrystallizedLavaArtifact.png align=middle><b> Crystallized Lava</b></p><p>Clue: Found in the Burning Abysses.<p>Description: Incandescent but still. Can be used efficiently as a desk lamp.<p>Requirement:  R100+, 2000+ Excavations, Play as Demon<p>Chance: ((x - 10000) / 200000)%, where x is Hall of Legends (Building count multipliers do NOT count)." coords="68,492,125,548" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/TitanHelmetArtifact.png align=middle><b> Titan Helmet</b></p><p>Clue: Found in the trade route used for Exchanges.<p>Description: Made of enough metal to craft a human-sized full plate.<p>Requirement:  R100+, 2000+ Excavations, Play as Titan<p>Chance: ((x ^ 2) / 1,500,000,000 (1.5B))%, where x is Royal Exchanges (Royal Exchange count multipliers <b>DO NOT</b> count)." coords="132,491,189,548" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/BranchoftheLifeTreeArtifact.png align=middle><b> Branch of the Life Tree</b><p>Clue: Found in the remains of druidic ancestors.<p>Description: Despite being torn from its source tree, it keeps growing buds and leaves.<p>Requirement: R100+, 2000+ Excavations, Play as Druid<p>Chance:  ((x ^ 3) / 2000000 (2M))%, where x is level of druid lineage." coords="196,490,253,548" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/NightmareFigmentArtifact.png align=middle><b> Nightmare Figment</b><p>Clue: A strong and quick brain is required.<p>Description: An unshaped, ephemeral substance which is politely trying to corrupt your mind.<p>Requirement:  R100+, 2000+ Excavations, Play as Faceless<p>Chance: ((x ^ 1.5) / 20000000 (20M))%, where x is headstart time in seconds." coords="260,491,317,549" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/BeardHair.png align=middle><b> Beard Hair</b></p><b>Clue</b>: It requires a lot of beard samples to get the perfect hair.<p><b>Description</b>: Hopefully coming from a real dwarven beard.</p> <p><b>Requirement</b>: R116+, 2000+ Excavations, Play as Dwarf</p> <p><b>Chance</b>: (x / 100000000 (100M))%, where x is assistant count" coords="323,493,381,551" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/PoisonVial.png align=middle><b> Poison Vial</b></p><b>Clue</b>: Combo your way through.<p><b>Description</b>: One drop of this is enough to fell thousands of non-immune creatures.</p> <p><b>Requirement</b>: R116+, 2000+ Excavations, Play as Drow</p> <p><b>Chance</b>: ((40 * x ^ 0.9) / 10000000 (10M))%, where x is combo strike count" coords="388,492,446,550" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/DragonScale.png align=middle><b> Dragon Scale</b></p><p><b>Clue</b>: Usually found when a lot of magic is lingering.<p><b>Description</b>: Very high on the realms' most accurate hardiness rankings.</p> <p><b>Requirement</b>: R116+, 2000+ Excavations, Play as Dragon</p> <p><b>Chance</b>: (x / 2500)%, where x is active spells" coords="4,555,60,613" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/LanternofGuidanceArtifact.png align=middle> Lantern of Guidance</b></p> <p><b>Clue</b>: Massive mana flows can offer guidance.</p> <p><b>Description</b>: Follow the guiding light, o wonderer, for it shall bring you fortune.</p> <p><b>Requirements</b>: R120+, Proof of Order</p> <p><b>Chance</b>: (x / 10,000,000,000 (10B))%, where x is mana regen.</p> <p><b>Effect</b>: Unlocks Tier 2 Temporal Flux" coords="67,555,124,612" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/OilLampArtifact.png align=middle> Oil Lamp</b></p> <p><b>Clue</b>: Chaos magic burns brightly.</p> <p><b>Description</b>: Rub it, polish it. And remember to express your desires precisely, lest you want to face dire consequences.</p> <p><b>Requirements</b>: R120+, Proof of Chaos</p> <p><b>Chance</b>: (min(x, y, z) / 1000 days)%, where x is Fairy Chanting spell activity time, y is Hellfire Blast spell activity time, and z is Brainwave spell activity time (all time).</p> <p><b>Effect</b>: Unlocks Tier 2 Maelstrom" coords="132,557,189,612" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/SparkofLifeArtifact.png align=middle> Spark of Life</b></p> <p><b>Clue</b>: The power of Creation may spark something new.</p> <p><b>Description</b>: The spark of Creation, dimly shining from the bottom of its encasing crystal.</p> <p><b>Requirements</b>: R120+, Proof of Balance</p> <p><b>Chance</b>: (ln(1 + x) ^ 2 / 6000)%, where x is FC collected this game.</p> <p><b>Effect</b>: Unlocks Tier 2 All Creation" coords="196,557,253,613" shape="0">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/PlanetaryForceArtifact.png align=middle> Planetary Force</p></b> <p><b>Clue</b>: Try every day for better luck! Missing a day is the same as breaking a mirror, you know.</p><p><b>Description</b>: Planets aligning seem to affect your realm in different ways...</p> <p><b>Requirements</b>: R100+</p> <p><b>Chance</b>: ((x ^ 2.5) / 5000)%, where x is amount of consecutive days logged in.</p> <p><b>Note</b>: Restarting the game is required to increase the counter</p> <p><b>Effect</b>: Gives upgrade with the same name</p> <p><b>Upgrade Effect</b>: Activates all Sun Force effects at once.</p> <p><b>Upgrade Cost</b>: 100 Qi (1e20)</p>" coords="259,555,316,612" shape="rect">
+    <area target="" research="<img src=http://musicfamily.org/realm/Factions/picks/MercenaryInsigniaArtifact.png align=middle> Mercenary Insignia</p><p><b>Clue</b>: Gem rhabdomancy seems to work best.</p><p><b>Description</b>: The infamous metal cross of the Mercenaries. You should be both proud and afraid to carry one.</p><p><b>Requirement</b>: R160+, Play as Mercenary</p><p><b>Chance</b>: (floor(log10(x) - 37) * 0.1)%, x is gems owned.</p>" coords="324,555,381,612" shape="rect">
+</map>
+</div>
+<div id="footer">
+</div>
+</div>
+ </div>
+<table style="width:100%; margin-top:1em; border:1px solid #; font-size:90%; text-align:center;">
+<tbody>
+<tr>
+<td style="padding:0.2em 0.5em;">
+<FONT color=#98AFC7> | <a href="/realm/Resources" research="Mana - Coins - Faction Coins - Gems - Rubies - Kreds"><FONT color=#98AFC7>Resources</a> | <a href="/realm/Reset" research="Reset - Abdication - Reincarnation"><FONT color=#98AFC7>Soft Resets</a> | <a href="/realm/BuildingAlignments" research="Building Alignments"><FONT color=#98AFC7>Buildings</a> | <a href="/realm/Heritages" research="Faction Heritages"><FONT color=#98AFC7>Heritages</a> | <a href="/realm/Bloodline" research="Faction Bloodlines" class="mw-redirect"><FONT color=#98AFC7>Bloodlines</a>
+ | <a href="/realm/Spells" research="Spells and Tier unlock Times"><FONT color=#98AFC7>Spells</a> | <a href="/realm/Artifacts" research="Excavations"><FONT color=#98AFC7>Excavations</a>  | <a href="/realm/Challenges" research="Complete list of Challenges and descriptions"><FONT color=#98AFC7>Challenges</a> | <a href="/realm/Upgrades" research="Upgrades"><FONT color=#98AFC7>Upgrades</a> | <a href="/realm/TrophyPage" research="Complete list of Trophies and descriptions"><FONT color=#98AFC7>Trophies</a>
+ | <a href="/realm/Factions" research="Factions"><FONT color=#98AFC7>Factions</a> | <a href="/realm/Research" research="The Research Facilities - Short and long names"><FONT color=#98AFC7>Research</a> |
+<p> | <a href="/realm/MercBuilds" research="Mercenary Builds"><FONT color=#98AFC7>Merc Builds</a> | <a href="/realm/ResearchBuilds" research="Research Builds"><FONT color=#98AFC7>Research Builds</a> | <a href="/realm/PBuilds" research="Evil and Good Prestige Builds"><FONT color=#98AFC7>Prestige Builds</a> | <a href="/realm/R40-R46" research="Ascension Builds"><FONT color=#98AFC7>Dragon Unlock</a> | <a href="/realm/R47-R60" research="Neutral Prestige Builds"><FONT color=#98AFC7>Neutral Prestige Builds</a> | <a href="/realm/Researchtree" research="Complete list of Research and descriptions"><FONT color=#98AFC7>Research Tree</a> |
+</p>
+<p>  |  <span style="display:inline-block; padding:1px 0;border-bottom:5px solid #f1e9d1;"> <a research="Vanilla Factions<p><FONT color=Blue>Good</font>: <FONT color=#efbbf0>Fairy, <FONT color=#46bd53>Elf</font>, <FONT color=#b1f4f1>Angel<p><FONT color=DarkRed>Evil</font>: <FONT color=#b8b87b>Goblin</font>, <FONT color=#62269d>Undead</font>, <FONT color=#e55131>Demon</font><p><FONT color=DarkGoldenRod>Neutral</font>: <FONT color=#eed835>Titan</font>, <FONT color=#876137>Druid</font>, <FONT color=#ac94ec>Faceless"><FONT color=#98AFC7>Vanilla Factions</a> </span>
+  |  <span style="display:inline-block; padding:1px 0;border-bottom:5px solid #4db1e8;"> <a research="Good Factions<p><FONT color=#efbbf0>Fairy<p><FONT color=#46bd53>Elf<p><FONT color=#b1f4f1>Angel<p>"><FONT color=#98AFC7>Good Factions</a> </span>
+  |  <span style="display:inline-block; padding:1px 0;border-bottom:5px solid #a0000d;"> <a research="Evil Factions<p><FONT color=#b8b87b>Goblin<p><FONT color=#62269d>Undead<p><FONT color=#e55131>Demon"><FONT color=#98AFC7>Evil Factions</a> </span>
+  |  <span style="display:inline-block; padding:1px 0;border-bottom:5px solid #dcdcdc;"> <a research="Neutral Factions<p><FONT color=#eed835>Titan<p><FONT color=#876137>Druid<p><FONT color=#ac94ec>Faceless"><FONT color=#98AFC7>Neutral Factions</a> </span>
+  |  <span style="display:inline-block; padding:1px 0;border-bottom:5px solid #000000;"> <a research="Prestige Factions<p><FONT color=#3333e6>Dwarf<p><FONT color=#9a0368>Drow<p><FONT color=#006400>Dragon"><FONT color=#98AFC7>Prestige Factions</a> </span>
+  |  <span style="display:inline-block; padding:1px 0;border-bottom:5px solid #000000;"> <a research="A2 Elite Factions<p><FONT color=#B0C4DE>Archon<p><FONT color=#483D8B>Djinn<p><FONT color=#C0C0C0>Makers"><FONT color=#98AFC7>A2 Elite Factions</a> </span> |
+</p>
+ | <a href="/realm/Events" research="Events"><FONT color=#98AFC7>Events</a>  | <a href="/realm/Changes" research="Latest Major Patch"><FONT color=#98AFC7>Latest Major Patch</a> | <a href="/realm/Changelog" research="Changelog"><FONT color=#98AFC7>Changelog</a> | <a href="/realm/Notation" research="Short - Scientific - Engineering"><FONT color=#98AFC7>Notation</a> |  <a href="/realm/Terminology" research="Commonly used terms and abbreviations"><FONT color=#98AFC7>Terminology</a> | <a href="/realm/Tools" research="Realm Weather Service - pastebin - auto clicker - Royal Scribe - Lara Crypt - imgur.com - Realm Grinder Wiki"><FONT color=#98AFC7>Tools</a> | <a href="/realm/Kong" research="Help"><FONT color=#98AFC7>Kongregate Links</a>  |
+<p>  |  <span style="display:inline-block; padding:1px 0;border-bottom:5px solid #efbbf0;"> <a href="/realm/FairyFaction" research="Fairy (Good)"><FONT color=#98AFC7>Fairy </a></span>
+  |  <span style="display:inline-block; padding:1px 0;border-bottom:5px solid #46bd53;"> <a href="/realm/ElfFaction" research="Elf (Good)"><FONT color=#98AFC7>Elf</a> </span>
+  |  <span style="display:inline-block; padding:1px 0;border-bottom:5px solid #b1f4f1;"> <a href="/realm/AngelFaction" research="Angel (Good)"><FONT color=#98AFC7>Angel</a> </span>
+  |  <span style="display:inline-block; padding:1px 0;border-bottom:5px solid #b8b87b;"> <a href="/realm/GoblinFaction" research="Goblin (Evil)"><FONT color=#98AFC7>Goblin</a> </span>
+  |  <span style="display:inline-block; padding:1px 0;border-bottom:5px solid #62269d;"> <a href="/realm/UndeadFaction" research="Undead (Evil)"><FONT color=#98AFC7>Undead</a> </span>
+  |  <span style="display:inline-block; padding:1px 0;border-bottom:5px solid #e55131;"> <a href="/realm/DemonFaction" research="Demon (Evil)"><FONT color=#98AFC7>Demon</a> </span>
+  |  <span style="display:inline-block; padding:1px 0;border-bottom:5px solid #eed835;"> <a href="/realm/TitanFaction" research="Titan (Neutral)"><FONT color=#98AFC7>Titan</a> </span>
+  |  <span style="display:inline-block; padding:1px 0;border-bottom:5px solid #876137;"> <a href="/realm/DruidFaction" research="Druid (Neutral)"><FONT color=#98AFC7>Druid</a> </span>
+  |  <span style="display:inline-block; padding:1px 0;border-bottom:5px solid #ac94ec;"> <a href="/realm/FacelessFaction" research="Faceless (Neutral)"><FONT color=#98AFC7>Faceless</a> </span> |
+</p>
+<p> | <span style="display:inline-block; padding:1px 0;border-bottom:5px solid #000000;"> <a href="/realm/MercenaryFaction" research="Mercenary"><FONT color=#98AFC7>Mercenary</a> </span>
+  |  <span style="display:inline-block; padding:1px 0;border-bottom:5px solid #3333e6;"> <a href="/realm/DwarfFaction" research="Dwarf (Good Prestige)"><FONT color=#98AFC7>Dwarf</a> </span>
+  |  <span style="display:inline-block; padding:1px 0;border-bottom:5px solid #9a0368;"> <a href="/realm/DrowFaction" research="Drow (Evil Prestige)"><FONT color=#98AFC7>Drow</a> </span>
+  |  <span style="display:inline-block; padding:1px 0;border-bottom:5px solid #006400;"> <a href="/realm/DragonFaction" research="Dragon (Neutral Prestige)"><FONT color=#98AFC7>Dragon</a> </span>
+  |  <span style="display:inline-block; padding:1px 0;border-bottom:5px solid #B0C4DE;"> <a href="/realm/ArchonFaction" research="Archon (A2 Elite)"><FONT color=#98AFC7>Archon</a> </span>
+  |  <span style="display:inline-block; padding:1px 0;border-bottom:5px solid #483D8B;"> <a href="/realm/DjinnFaction" research="Djinn (A2 Elite)"><FONT color=#98AFC7>Djinn</a> </span>
+  |  <span style="display:inline-block; padding:1px 0;border-bottom:5px solid #C0C0C0;"> <a href="/realm/MakersFaction" research="Makers (A2 Elite)"><FONT color=#98AFC7>Makers</a> </span> |
+</p>
+</td></tr></tbody></table>
+<P align="center"><FONT color=#98AFC7> Contact me <a target="_blank" href="http://www.kongregate.com/accounts/G00FBALL/"><FONT color=#98AFC7><b>G00FBALL</b></font></a></P>
+<div align="center"><FONT color=#98AFC7> <b>Thank You!!! for all your help.</b></a></p>
+<marquee class="html-marquee" direction="up" behavior="scroll" scrollamount="2">
+<P align="center">Aaborg</p>
+<P align="center">Cyden</p>
+<P align="center">Eltro</p>
+<P align="center">primal cradily</p>
+<P align="center">ARTEZZ</p>
+<P align="center">somarilnos</p>
+<P align="center">Grazloth</p>
+<P align="center">hiimahotdog</p>
+<P align="center">mrothorr</p>
+<P align="center">AKL</p>
+<P align="center">mangafreak140</p>
+<P align="center">acer4321</p>
+<P align="center">Mysticman89</p>
+<P align="center">Sas Assassin</p>
+<P align="center">LeoC.II</p>
+<P align="center">Lollipop</p>
+<P align="center">Geno</p>
+<P align="center">Liraso</p>
+<P align="center">Magnusly</p>
+<P align="center">pseudobyte</p>
+<P align="center">Igorogi</p>
+<P align="center">Fonzoland</p>
+<P align="center">ivanovichkoslov</p>
+<P align="center">dox4242</p>
+<P align="center">capito27</p>
+<P align="center">Necrodoom</p>
+<P align="center">Lapare</p>
+<P align="center">Curunur</p>
+<P align="center">Tskami_ek</p>
+<P align="center">Sum Yung Gai</p>
+<P align="center">oholoko</p>
+<P align="center">Damxacer1</p>
+<P align="center">websterguy</p>
+<P align="center">LeoB516</p>
+<P align="center">CluelessWonder</p>
+<P align="center">Doubleshoe</p>
+<P align="center">Sc0rp</p>
+<P align="center">Heronimo2</p>
+<P align="center">RastlinV</p>
+<P align="center">Uni</p>
+<P align="center">chaosmarine4226</p>
+<P align="center">Namelessname</p>
+<P align="center">iam10ninjas</p>
+<P align="center">Kanra</p>
+<P align="center">myogin</p>
+<P align="center">Okami</p>
+<P align="center">Parasitez83</p>
+<P align="center">Dienes</p>
+<P align="center">apocal_88</p>
+<P align="center">KRIEG</p>
+<P align="center">Sheer</p>
+<P align="center">Xorious</p>
+<P align="center">The Homa</p>
+<P align="center">Chaos</p>
+<P align="center">Kurt-bookboy</p>
+<P align="center">xemima</p>
+<P align="center">Boffo</p>
+<P align="center">Luio2revenge</p>
+<P align="center">6000j</p>
+<P align="center">Yarilo</p>
+<P align="center">PseudonymousBosh</p>
+<P align="center">UndeadAbbys</p>
+<P align="center">Max Schradin</p>
+<P align="center">jonny0panic</p>
+<P align="center">AJZ3</p>
+<P align="center">Slakkarn</p>
+<P align="center">noonomoon</p>
+<P align="center">Jenetikitty</p>
+<P align="center">Suranis</p>
+<P align="center">saitenhieb</p>
+<P align="center">Slakkarn</p>
+<P align="center">MrGerman</p>
+<P align="center">WaitingIdly</p>
+<P align="center">Zange</p>
+<P align="center">eleganceseraph</p>
+<P align="center">magnanimousCynic</p>
+<P align="center">pkal</p>
+<P align="center">tangyifei</p>
+<P align="center">torskenn</p>
+<P align="center">Exsanguine</p>
+<P align="center">xXRochforteXx</p>
+<P align="center">Zyllyn</p>
+<P align="center">Spanosa</p>
+<P align="center">grelf</p>
+<P align="center">jabberok</p>
+<P align="center">Lavi04</p>
+<P align="center">McguyverZero</p>
+<P align="center">aviv</p>
+<P align="center">TrostNi</p>
+<P align="center">Zariars</p>
+<P align="center">toifel131</p>
+<P align="center">johny_blaze</p>
+<P align="center">ThePeon</p>
+<P align="center">djones0823</p>
+<P align="center">CheeseWitch</p>
+<P align="center">Ghorre</p>
+<P align="center">BioRules</p>
+<P align="center">NTWgrinder</p>
+<P align="center">Reknot</p>
+<P align="center">Freakomant</p>
+<P align="center">lordulster</p>
+<P align="center">shayner12</p>
+<P align="center">DainDwarf</p>
+<P align="center">Wlerin</p>
+<P align="center">xeperiset</p>
+<P align="center">ehyder</p>
+<P align="center">brc48632</p>
+<P align="center">WynneYilmaz</p>
+<P align="center">Keben</p>
+<P align="center">BillK14</p>
+<P align="center">ColdDrake13</p>
+<P align="center">arintayn2</p>
+<P align="center">Shantie</p>
+<P align="center">ErrolErrolson</p>
+<P align="center">ydc1017902176</p>
+<P align="center">Milkopilko</p>
+<P align="center">Mechaflood</p>
+<P align="center">Wolf415</p>
+<P align="center">ThatGuy</p>
+<P align="center">drseilzug</p>
+<P align="center">ash1soccer</p>
+<P align="center">Just1pirate</p>
+<P align="center">Space Troll</p>
+<P align="center">jgchan29</p>
+<P align="center">bobbert</p>
+<P align="center">Soulrift</p>
+<P align="center">MarioFanaticXV</p>
+<P align="center">mangaking118</p>
+<P align="center">Franelas</p>
+<P align="center">Delichtig</p>
+<P align="center">Anathah</p>
+<P align="center">KuraTheDog</p>
+<P align="center">Tanny</p>
+<P align="center">Ck</p>
+<P align="center">Lavi04</p>
+<P align="center">johnharveybc</p>
+<P align="center">Essigschurke</p>
+<P align="center">masteff</p>
+<P align="center">Merp</p>
+<P align="center">Дикий Речной Пёс</p>
+<P align="center">Ach3ck</p>
+<P align="center">Sho Phaune</p>
+<P align="center">Xikre</p>
+<P align="center">Just1pirate</p>
+<P align="center">Maya</p>
+<P align="center">Sandworm</p>
+<P align="center">Paah</p>
+<P align="center">Redd</p>
+<P align="center">5ku||3d</p>
+<P align="center">johnleprude</p>
+<P align="center">Goholtramor</p>
+<P align="center">Matrix4767</p>
+<P align="center">GreenMJ13</p>
+<P align="center">Bearpaws</p>
+<P align="center">Palamazzi</p>
+<P align="center">Redd</p>
+<P align="center">ManDude33</p>
+<P align="center">JezuzLizard</p>
+<P align="center">heyitsdross</p>
+<P align="center">Fire</p>
+<P align="center">Archmage</p>
+<P align="center">Proxy</p>
+<P align="center">lesdruides</p>
+<P align="center">Guy</p>
+<P align="center">FastHit</p>
+<P align="center">FedeJossa</p>
+<P align="center">Masterzan</p>
+<P align="center">Ryonir</p>
+<P align="center">Cromieplays</p>
+<P align="center">bigshawnt</p>
+<P align="center">Tyler</p>
+<P align="center">RageBall</p>
+<P align="center">Xpt14</p>
+<P align="center">XenTwo</p>
+<P align="center">uwnim</p>
+<P align="center">Da Banana Man</p>
+<P align="center">DED SERVER</p>
+<P align="center">Kacper</p>
+<P align="center">homebrewer54</p>
+<P align="center">JGChan</p>
+<P align="center">Zeen</p>
+<P align="center">RebelKeithy</p>
+<P align="center">CamoBrie</p>
+<P align="center">Zepto</p>
+<P align="center">7636kei</p>
+<P align="center">Kaos</p>
+<P align="center">Ashthar</p>
+<P align="center">Cromedome</p>
+<P align="center">Coal_CC</p>
+<P align="center">Ebilkill</p>
+<P align="center">Evengrey</p>
+<P align="center">Tenebricosus</p>
+<P align="center">Chaosmancer7</p>
+<P align="center">Nizidramaniiyt</p>
+<P align="center">onianinara</p>
+<P align="center">Zelphh1</p>
+<P align="center">Synthini</p>
+<P align="center">Rustle Crowe</p>
+<P align="center">NTWgreatest</p>
+<P align="center">spamtraprus</p>
+<P align="center">CafeMaker</p>
+<P align="center">waterfire425</p>
+<P align="center">btzeroes</p>
+<P align="center">HeinQuek</p>
+<P align="center">Alright</p>
+<P align="center">Versine</p>
+<P align="center">Fryguy9</p>
+<P align="center">raato</p>
+<P align="center">escalon</p>
+<P align="center">Onoxious</p>
+<P align="center">BionicFrog</p>
+<P align="center">Ignus</p>
+<P align="center">EagleAgg03</p>
+<P align="center">Teabagger Vance</p>
+<P align="center">Ilya</p>
+<P align="center">lvl 1 crook</p>
+<P align="center">Seyliz</p>
+<P align="center">Zylon</p>
+<P align="center">j8ner</p>
+<P align="center">Antendren</p>
+<P align="center">SomeoneLucas</p>
+<P align="center">Boyo</p>
+<P align="center">DR</p>
+<P align="center">plaaosert</p>
+<P align="center">XenosHg</p>
+<P align="center">oswarlan</p>
+<P align="center">Joa</p>
+<P align="center">pizza_troll</p>
+<P align="center">NateMcCloud</p>
+<P align="center">boss_mc</p>
+<P align="center">lesd</p>
+<P align="center">Technosaurus</p>
+<P align="center">Blackeye</p>
+<P align="center">cralo</p>
+<P align="center">Weedheter</p>
+<P align="center">art-of-dom</p>
+<P align="center">Popington</p>
+<P align="center">Username</p>
+<P align="center">MythWiz_</p>
+<P align="center">pacmanlite</p>
+<P align="center">Hotspot</p>
+<P align="center">gvaiou</p>
+<P align="center">tbrown30</p>
+<P align="center">Glitchstorm</p>
+<P align="center">RetroDerpSquid9</p>
+<P align="center">Sythen2014</p>
+<P align="center">Lead Luigi</p>
+<P align="center">Aaron Cook</p>
+<P align="center">gamemasterty</p>
+<P align="center">Trewq_</p>
+<P align="center">rhaek7</p>
+<P align="center">fwbx529</p>
+<P align="center">waga baba bobo</p>
+<P align="center">Polibus</p>
+<P align="center">ukulelejongetje<p>
+<P align="center">q1235<p>
+<P align="center">kiluh</p>
+<P align="center">KyonLevic</p>
+<P align="center">Tenyasha</p>
+<P align="center">Altoscholto</p>
+<P align="center">trevYT</p>
+<P align="center">Amirin</p>
+<P align="center">NeutralPotato</p>
+<P align="center">Vince</p>
+<P align="center">BuzzMarzz</p>
+<P align="center">Drogor</p>
+<P align="center">wolfsblood</p>
+<P align="center">blackbird</p>
+<P align="center">slantfer</p>
+<P align="center">Kroll</p>
+<P align="center">Dariof4</p>
+<P align="center">furkannnO</p>
+<P align="center">Neutral Potato</p>
+<P align="center">Taxiway</p>
+<P align="center">aurora</p>
+<P align="center">Book909</p>
+<P align="center">solidifiedmind</p>
+<P align="center">StAUG</p>
+<P align="center">chrispi</p>
+<P align="center">arcanmster</p>
+<P align="center">Azua</p>
+<P align="center">Zeckenschwarm</p>
+ </marquee>
+<style>
+.html-marquee {
+  height:14px;
+  width:160px;
+  background-color:Black;
+  font-family:Cursive;
+  font-size:14px;
+  color:#98AFC7;
+  font-weight:bold;
+  border-width:1;
+  border-style:solid;
+  border-color:Black;
+}
+</style>
+<script>
+function myFunction(e) {
+  var copyText = e.next();
+  if (isOS()) {
+        var textElement = copyText[0];
+        var editable = textElement.contentEditable;
+        var readOnly = textElement.readOnly;
+        textElement.contentEditable = true;
+        textElement.readOnly = false;
+        var range = document.createRange();
+        range.selectNodeContents(textElement);
+        var selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        textElement.setSelectionRange(0, 999999);
+        textElement.contentEditable = editable;
+        textElement.readOnly = readOnly;
+    } else {
+        copyText.select();
+    }
+  document.execCommand('copy');
+}
+ function isOS() {
+    return navigator.userAgent.match(/ipad|iphone/i);
+}
+</script>
+<div align="center">
+<a href="https://www.cutercounter.com/" target="_blank"><img src="https://www.cutercounter.com/hits.php?id=geqcfpc&nd=9&style=39" border="0" alt="visitor counter"></a>
+</body>
+</html>
